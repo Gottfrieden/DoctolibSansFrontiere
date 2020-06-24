@@ -1,0 +1,16 @@
+.single-prescription-container {
+  background-color:var(--lightBlue);
+  padding:5vh 0 10vh 0;
+}
+.single-prescription-container h2 {
+  text-align:center;
+  font-size:20px;
+}
+.single-prescription-container .back-to-all {
+  background-color:white;
+  width:100%;
+  display:flex;
+  padding:5px 10px;
+  align-items:center;
+  justify-content:flex-start;
+}

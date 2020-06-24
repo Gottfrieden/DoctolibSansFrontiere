@@ -16,6 +16,9 @@ import PatientAccount from './pages/PatientAccount';
 import DoctorAccount from './pages/DoctorAccount';
 import Agenda from './pages/Agenda';
 import SeePrescription from './pages/SeePrescription';
+import Connection from './pages/Connection';
+import SinglePrescription from './pages/SinglePrescription';
+import './fonts/gilroy.css';
 
 function App () {
   return (
@@ -24,6 +27,7 @@ function App () {
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/connection' component={Connection} />
           <Route exact path='/user/patient' component={RegisterPatient} />
           <Route exact path='/user/doctor' component={RegisterDoctor} />
           <Route exact path='/user/doctor/:id/prescription/new' component={NewPrescription} />
@@ -31,7 +35,8 @@ function App () {
           <Route exact path='/user/patient/:id' component={PatientAccount} />
           <Route exact path='/user/doctor/:id' component={DoctorAccount} />
           <Route exact path='/user/patient/:id/agenda' component={Agenda} />
-          <Route exact path='/user/patient/:id/prescription' component={SeePrescription} />
+          <Route exact path='/user/patient/:id/prescriptions' component={SeePrescription} />
+          <Route exact path='/single-ordonnance' component={SinglePrescription} />
         </Switch>
       </div>
     </Router>
