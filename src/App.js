@@ -1,23 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import * as firebase from 'firebase';
-import configFirebase from './firebase';
+import React from 'react';
+import NewPrescription from './pages/NewPrescription'
 
 function App() {
 
-  const [state, setstate] = useState()
-
-  useEffect(() => {
-    firebase.initializeApp(configFirebase);
-    const ref = firebase.database().ref('0');
-    ref.on('value', snapshot => {
-      console.log(snapshot.val())
-      setstate(snapshot.val())
-    })
-  }, [])
-
-
   return (
     <div className="App">
+      <NewPrescription />
     </div>
   );
 }
