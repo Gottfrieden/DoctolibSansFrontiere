@@ -1,0 +1,13 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family:gilroy;
+}
+h2 {
+  font-size:28px;
+}
+.content-container {
+  padding:20px;
+  box-shadow:0 0 7px grey;
+  width:330px;
+  margin:0 auto;
+  border-radius:15px;
+}

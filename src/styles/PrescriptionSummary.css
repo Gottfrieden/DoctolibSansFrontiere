@@ -1,0 +1,74 @@
+.single-prescription-container .prescription-summary-container {
+  padding:20px;
+  position:relative;
+}
+.single-prescription-container .prescription-summary-container .first-line {
+  display:flex;
+}
+.single-prescription-container .prescription-summary-container .first-line h3 {
+  width:100%;
+}
+.single-prescription-container .prescription-summary-container .first-line p {
+  text-align:right;
+}
+.single-prescription-container .prescription-summary-container .doctor-name {
+  margin-block-end:0px;
+}
+.single-prescription-container .prescription-summary-container .adress-phone-container {
+  display:flex;
+}
+.single-prescription-container .prescription-summary-container .adress-phone-container p {
+  margin-block-start:5px;
+}
+.single-prescription-container .prescription-summary-container .adress-phone-container .adress-container {
+  margin-right:20px;
+  color:var(--lightGreyText);
+}
+.single-prescription-container .prescription-summary-container .adress-phone-container .adress-container p {
+  margin-block-start:0px;
+}
+.single-prescription-container .prescription-summary-container .adress-phone-container .adress-container p:nth-of-type(1) {
+  margin-block-end:0px;
+  margin-block-start:5px;
+}
+.single-prescription-container .prescription-summary-container .medication-info-container {
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:20px;
+}
+.single-prescription-container .prescription-summary-container .medication-info-container span {
+  width:15px;
+  height:15px;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  margin-right:10px;  
+}
+.single-prescription-container .prescription-summary-container .medication-info-container .image-content-container {
+  display:flex;
+  align-items:center;
+}
+.single-prescription-container .prescription-summary-container .medication-info-container .image-content-container span.pill-image {
+  background-image:url('../images/pill.png');
+}
+.single-prescription-container .prescription-summary-container .medication-info-container .image-content-container span.calendar-image {
+  background-image:url('../images/calendar.png');
+}
+.single-prescription-container .prescription-summary-container .renew-container-bottom {
+  position:absolute;
+  bottom:0;
+  background-color:var(--darkBlue);
+  left:0;
+  width:100%;
+  height:30px;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:0 0 15px 15px;
+}
+.single-prescription-container .prescription-summary-container .renew-container-bottom p {
+  margin-block-end:0;
+  margin-block-start:0;
+  font-size:14px;
+}
