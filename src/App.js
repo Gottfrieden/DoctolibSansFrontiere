@@ -1,5 +1,5 @@
 import React from 'react';
-import { 
+import {
   BrowserRouter as Router,
   Route,
   Switch
@@ -17,7 +17,7 @@ import DoctorAccount from './pages/DoctorAccount';
 import Agenda from './pages/Agenda';
 import SeePrescription from './pages/SeePrescription';
 
-function App() {
+function App () {
   return (
     <Router>
       <div>
