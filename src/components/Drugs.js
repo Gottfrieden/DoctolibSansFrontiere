@@ -1,11 +1,9 @@
 import React from 'react';
 
 const Drugs = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return (
+    <div />
+  );
+};
 
 export default Drugs;
