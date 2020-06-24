@@ -11,3 +11,12 @@ h2 {
   margin:0 auto;
   border-radius:15px;
 }
+.time-image {
+  background-image:url('../images/time.png');
+}
+.calendar-image {
+  background-image:url('../images/calendar.png')
+}
+.info-image {
+  background-image:url('../images/info.png');
+}

@@ -43,6 +43,7 @@
   background-size:cover;
   background-repeat:no-repeat;
   margin-right:10px;  
+  margin-top:-5px;
 }
 .single-prescription-container .prescription-summary-container .medication-info-container .image-content-container {
   display:flex;
