@@ -1,7 +1,8 @@
 
-#seeprescription-main-container {
+main#seeprescription-main-container {
   width:95%;
-  margin:auto;
+  margin:0 auto;
+  min-height:87vh;
 }
 h2 {
   text-align:center;
@@ -11,7 +12,7 @@ h2 {
   position:relative;
   width:100%;
   max-width:800px;
-  margin:auto;
+  margin:0 auto;
 }
 .patient-prescriptions-container .patient-prescription-container {
   display:flex;

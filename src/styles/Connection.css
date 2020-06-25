@@ -1,5 +1,12 @@
 .connection-container {
   padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.connection-container div:nth-of-type(1) {
+  margin-top:50px;
 }
 .user-connection-container {
   display:flex;
@@ -10,7 +17,7 @@
   border-radius:10px;
   box-shadow:var(--heavyBoxShadow);
   color:white;
-  margin: 50px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
   transition: all 0.2s ease-in-out;
 }
 .user-connection-container button {
