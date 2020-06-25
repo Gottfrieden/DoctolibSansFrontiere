@@ -4,10 +4,9 @@ const SeePrescription = () => {
   return (
     <>
       <h2>My Prescriptions</h2>
-      <main id='seeprescription-main-container' className='main-container'>
-      </main>
+      <main id='seeprescription-main-container' className='main-container' />
     </>
-  )
-}
+  );
+};
 
 export default SeePrescription;

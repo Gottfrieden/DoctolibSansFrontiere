@@ -1,11 +1,11 @@
 import React from 'react';
+import SingleDrug from './SingleDrug';
 
-const Drugs = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+export default function Drugs () {
+  return (
+    <div className='all-drugs-container'>
+      <h2>Medication</h2>
+      <SingleDrug />
+    </div>
+  );
 }
-
-export default Drugs;
