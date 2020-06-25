@@ -11,6 +11,7 @@ header img {
 }
 header nav ul {
   display:inline-block;
+  padding: 0;
 }
 header nav ul li {
   display:inline;

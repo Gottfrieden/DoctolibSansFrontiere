@@ -7,16 +7,20 @@
 .search-background {
     background-color: var(--darkBlue);
     border-radius:15px 15px 0 0;
-    margin-left:10px;
-    Width:350px;
+    margin-left:15px;
+    margin-right: 20px;
+    width:350px;
     height:auto;
 }
 .list-all-prescriptions {
    border-style: ridge;
-   margin:1px 15px 0px 10px;
+   margin-left:15px;
+   margin-right: 20px;
+   width:350px;
    
  }
  @media screen and (min-width: 750px) {
+
 .search-prescriptions { 
     margin:10px 0px 10px 5px;
     border-radius:15px 15px 15px 15px;
@@ -26,14 +30,16 @@
 .search-background {
     background-color: var(--darkBlue);
     border-radius:15px 15px 0 0;
-    margin-left:10px;
-    Width:1400px;
+    width:1400px;
     height:60px;
+    margin:5px 0px 0px 10px;
 }
 .list-all-prescriptions {
-   border-style: ridge;
-   margin:1px 443px 0px 10px;
+   width:1400px;
+   margin:5px 0px 0px 10px;
+
    
+
  }
 }
 
