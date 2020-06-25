@@ -46,7 +46,7 @@
   border:1px solid var(--darkBlue);
 }
 .user-connection-container.patient button:hover {
-  background-color:var(--darkGreen);
+  background-color:white;
   color:white;
 }
 .user-connection-container:hover {
