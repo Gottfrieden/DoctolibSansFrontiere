@@ -1,4 +1,4 @@
-import React  , { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import fb from '../services/firebase'
 import NewDrugs from '../components/NewDrugs';
 import produce from "immer";
@@ -178,7 +178,7 @@ const NewPrescription = () => {
 
         {newPresctiption.drugs.map((drug, index) => {
           return (
-            <NewDrugs drug={drug} index={index} handleChange={handleChange} handleChangeCheckBox={handleChangeCheckBox}/>
+            <NewDrugs key={index} drug={drug} index={index} handleChange={handleChange} handleChangeCheckBox={handleChangeCheckBox}/>
           )
         })} 
 
