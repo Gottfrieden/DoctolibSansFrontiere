@@ -1,0 +1,88 @@
+
+#seeprescription-main-container {
+  width:95%;
+  margin:auto;
+}
+h2 {
+  text-align:center;
+  font-size:16px;
+}
+.patient-prescriptions-container {
+  position:relative;
+  max-width:600px;
+  margin:auto;
+}
+.patient-prescriptions-container .patient-prescription-container {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  background-color:var(--lightBlue);
+  position:relative;
+  border:1px solid var(--lightBlue);
+  margin-bottom:10px;
+  transition:all 0.2s ease-in-out;
+}
+.patient-prescriptions-container .patient-prescription-container:hover {
+  transform:scale(1.01);
+  box-shadow:var(--heavyBoxShadow);
+}
+.patient-prescriptions-container a {
+  text-decoration:none;
+  color:var(--darkBlue);
+}
+.patient-prescriptions-container .patient-prescription-container .prescription-status {
+  background-color:white;
+  position:absolute;
+  left:0;
+  top:0;
+  width:40px;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.patient-prescriptions-container .patient-prescription-container .prescription-status .prescription-status-icon {
+  width:20px;
+  height:20px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.patient-prescriptions-container .patient-prescription-container .prescription-status .prescription-status-icon.waiting {
+  background-image:url('../images/time-light.png');
+}
+.patient-prescriptions-container .patient-prescription-container .prescription-status .prescription-status-icon.scanned {
+  background-image:url('../images/check.png');
+}
+.patient-prescriptions-container .patient-prescription-container .prescription-status .prescription-status-icon.canceled {
+  background-image:url('../images/canceled.png');
+}
+.patient-prescriptions-container .patient-prescription-container .prescription-delivery-date {
+  margin-left:50px;
+}
+.patient-prescriptions-container .patient-prescription-container .prescription-doctor-name {
+  color:var(--lightGreyText);
+  margin-left:50px;
+}
+.patient-prescriptions-container .patient-prescription-container .prescription-delivery-date p {
+  margin-block-end:0px;
+  margin-block-start:4px;
+}
+.patient-prescriptions-container .patient-prescription-container .prescription-doctor-name p {
+  margin-block-end:4px;
+  margin-block-start:0px;
+}
+@media all and (min-width:900px) {
+  .patient-prescriptions-container .patient-prescription-container .prescription-doctor-name {
+    position:absolute;
+    right:20px;
+  }
+  .patient-prescriptions-container .patient-prescription-container {
+    flex-direction:row;
+    padding:15px 0;
+  }
+  .patient-prescriptions-container .patient-prescription-container .prescription-delivery-date p, .patient-prescriptions-container .patient-prescription-container .prescription-doctor-name p {
+    margin-block-end:0px;
+    margin-block-start:0px;
+  }
+}

@@ -121,7 +121,7 @@ const NewPrescription = () => {
   };
 
   const handleNumberOfRenew = () => {
-    const r = document.getElementById('renew-frequency');
+    const r = document.getElementById('renewable-frequency');
     r.classList.toggle('visible');
   };
 
@@ -131,8 +131,7 @@ const NewPrescription = () => {
         <h2 id='new-prescription-title'>New Prescription</h2>
       </div>
       <form onSubmit={handleSubmit}>
-        <div className='NewPrescription-presciption-container'>
-          <h3>Prescription</h3>
+        <div className='NewPrescription-presciption-container content-container'>
 
           <div className='newPrescription-ligne'>
             <label htmlFor='duration'>duration:</label>
@@ -145,11 +144,13 @@ const NewPrescription = () => {
           </div>
 
           <div className='newPrescription-ligne'>
-            <input type='checkbox' id='renewable' onChange={e => setnewPresctiption({ ...newPresctiption, renewable: !newPresctiption.renewable })} value={newPresctiption.renewable} />
+            <input type='checkbox' id='renewable' onClick={handleNumberOfRenew} onChange={e => setnewPresctiption({ ...newPresctiption, renewable: !newPresctiption.renewable })} value={newPresctiption.renewable} />
             <label htmlFor='renewable'>renewable</label>
 
-            <input type='number' min='0' id='renewable_time' onChange={e => setnewPresctiption({ ...newPresctiption, renewable_time: e.target.value })} value={newPresctiption.renewable_time} />
-            <label htmlFor='renewable_time'>time(s)</label>
+            <div id='renewable-frequency'>
+              <input type='number' min='0' id='renewable_time' onChange={e => setnewPresctiption({ ...newPresctiption, renewable_time: e.target.value })} value={newPresctiption.renewable_time} />
+              <label htmlFor='renewable_time'>time(s)</label>
+            </div>
           </div>
 
           <div>
@@ -173,15 +174,17 @@ const NewPrescription = () => {
 
         {newPresctiption.drugs.map((drug, index) => {
           return (
-            <NewDrugs key={index} drug={drug} index={index} handleChange={handleChange} handleChangeCheckBox={handleChangeCheckBox} />
-          );
-        })};
+            <div className='new-drug-container content-container'>
+              <NewDrugs drug={drug} index={index} handleChange={handleChange} handleChangeCheckBox={handleChangeCheckBox}/>
+            </div>
+          )
+        })} 
 
         <input type='submit' value='valid' />
       </form>
-      <button onClick={handleNewDrug}>New Drug</button>
+      <button className='add-new-drug' onClick={handleNewDrug}><span className='add-new' />New Drug</button>
     </main>
-  );
-};
+  )
+}
 
 export default NewPrescription;
