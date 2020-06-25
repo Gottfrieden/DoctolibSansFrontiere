@@ -120,10 +120,15 @@ const NewPrescription = () => {
     setnewPresctiption(nextState);
   };
 
+  const handleNumberOfRenew = () => {
+    const r = document.getElementById('renew-frequency');
+    r.classList.toggle('visible');
+  };
+
   return (
     <main className='main-container'>
       <div>
-        <h2>New Prescription</h2>
+        <h2 id='new-prescription-title'>New Prescription</h2>
       </div>
       <form onSubmit={handleSubmit}>
         <div className='NewPrescription-presciption-container'>
@@ -170,7 +175,7 @@ const NewPrescription = () => {
           return (
             <NewDrugs key={index} drug={drug} index={index} handleChange={handleChange} handleChangeCheckBox={handleChangeCheckBox} />
           );
-        })}
+        })};
 
         <input type='submit' value='valid' />
       </form>

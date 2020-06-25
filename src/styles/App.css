@@ -1,22 +1,80 @@
 h1, h2, h3, h4, h5, h6, p {
   font-family:gilroy;
 }
+
 h2 {
   font-size:28px;
 }
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-family: Gilroy;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .content-container {
   padding:20px;
   box-shadow:0 0 7px grey;
-  width:330px;
+  width:300px;
   margin:0 auto;
   border-radius:15px;
 }
+
 .time-image {
   background-image:url('../images/time.png');
 }
+
 .calendar-image {
   background-image:url('../images/calendar.png')
 }
+
 .info-image {
   background-image:url('../images/info.png');
+}
+
+input, label, textarea, select, button {
+  box-sizing: border-box;
+}
+
+input, select, textarea {
+  border:1px solid var(--lightBlue);
+  padding:10px;
+  font-family:gilroy;
+  color:var(--darkBlue);
+}
+
+label {
+  font-family:gilroy;
+  margin-right:20px;
+  font-weight: 700;
+}
+
+input {
+  margin-right:20px;
+}
+
+input::placeholder {
+  color:var(--darkBlue);
+  font-family:gilroy;
+  font-size:14px;
+}
+
+@media all and (min-width:900px) {
+  .content-container {
+    width:700px;
+  }
 }

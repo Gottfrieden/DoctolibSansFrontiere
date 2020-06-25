@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import fb from '../services/firebase';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
+import '../styles/PrescriptionHistory.css';
 
 const PrescriptionHistory = () => {
   const [prescriptions, setPrescriptions] = useState([]);
@@ -23,7 +24,7 @@ const PrescriptionHistory = () => {
       <main id='prescription-main-container' className='main-container'>
         <div className='search-background'>
           <input type='search' placeholder='Rechercher' />
-          <div>
+          <div className='list-all-prescriptions'>
             {prescriptions.map(p =>
               <Link to='/single-doctor-prescription' key={p.id}>
                 <div style={{ backgroundColor: 'pink' }}>

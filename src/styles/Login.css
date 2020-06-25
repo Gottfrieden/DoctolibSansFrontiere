@@ -21,4 +21,6 @@
 .login-form button {
   width: 100%;
   margin-top: 10px;
+  background-color: var(--darkBlue);
+  padding: 10px 0;
 }
