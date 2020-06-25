@@ -134,30 +134,31 @@ const NewPrescription = () => {
         <div className='NewPrescription-presciption-container content-container'>
 
           <div className='newPrescription-ligne'>
-            <label htmlFor='duration'>duration:</label>
+            <label htmlFor='duration'>Duration:</label>
             <input type='number' min='0' id='duration' onChange={e => setnewPresctiption({ ...newPresctiption, duration: e.target.value })} value={newPresctiption.duration} />
           </div>
 
           <div className='newPrescription-ligne'>
-            <label htmlFor='duration'>drugs number</label>
+            <label htmlFor='duration'>Drugs number:</label>
             <input type='number' min='0' id='drugs_number' onChange={e => setnewPresctiption({ ...newPresctiption, drugs_number: e.target.value })} value={newPresctiption.drugs_number} />
           </div>
 
-          <div className='newPrescription-ligne'>
-            <input type='checkbox' id='renewable' onClick={handleNumberOfRenew} onChange={e => setnewPresctiption({ ...newPresctiption, renewable: !newPresctiption.renewable })} value={newPresctiption.renewable} />
-            <label htmlFor='renewable'>renewable</label>
-
+          <div className='newPrescription-ligne all-renew-content-container'>
+            <div className='renewable-box-container'>
+              <input type='checkbox' id='renewable' onClick={handleNumberOfRenew} onChange={e => setnewPresctiption({ ...newPresctiption, renewable: !newPresctiption.renewable })} value={newPresctiption.renewable} />
+              <label htmlFor='renewable'>Renewable ?</label>
+            </div>
             <div id='renewable-frequency'>
               <input type='number' min='0' id='renewable_time' onChange={e => setnewPresctiption({ ...newPresctiption, renewable_time: e.target.value })} value={newPresctiption.renewable_time} />
               <label htmlFor='renewable_time'>time(s)</label>
             </div>
           </div>
 
-          <div>
+          <div className='title-blue-background'>
             <p>Patient</p>
           </div>
 
-          <div className='newPrescription-ligne'>
+          <div className='newPrescription-ligne civility-container'>
             <select name='civility' onChange={e => setnewPresctiption({ ...newPresctiption, patient: { ...newPresctiption.patient, civility: e.target.value } })} value={newPresctiption.patient.civility}>
               <option value='mr'>Mr</option>
               <option value='ms'>Ms</option>
@@ -174,7 +175,7 @@ const NewPrescription = () => {
 
         {newPresctiption.drugs.map((drug, index) => {
           return (
-            <div className='new-drug-container content-container'>
+            <div key={drug.name} className='new-drug-container content-container'>
               <NewDrugs drug={drug} index={index} handleChange={handleChange} handleChangeCheckBox={handleChangeCheckBox}/>
             </div>
           )

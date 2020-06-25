@@ -53,16 +53,17 @@ input, label, textarea, select, button {
 }
 
 input, select, textarea {
-  border:1px solid var(--lightBlue);
+  border:1px solid var(--darkBlue);
   padding:10px;
   font-family:gilroy;
   color:var(--darkBlue);
 }
-
+select {
+  margin-right:20px;
+}
 label {
   font-family:gilroy;
   margin-right:20px;
-  font-weight: 700;
 }
 
 input {
@@ -73,6 +74,10 @@ input::placeholder {
   color:var(--darkBlue);
   font-family:gilroy;
   font-size:14px;
+}
+.treatment-duration-small-container p {
+  margin-block-end: 0px;
+  margin-block-start:0px;
 }
 
 @media all and (min-width:900px) {
