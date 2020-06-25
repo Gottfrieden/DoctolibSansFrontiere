@@ -22,6 +22,7 @@ import SinglePrescription from './pages/SinglePrescription';
 import SingleDoctorPrescription from './pages/SingleDoctorPrescription';
 import './fonts/gilroy.css';
 
+
 function App () {
   return (
     <Router>
