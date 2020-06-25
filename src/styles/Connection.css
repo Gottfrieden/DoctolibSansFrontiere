@@ -11,6 +11,7 @@
   box-shadow:var(--heavyBoxShadow);
   color:white;
   margin:20px 0;
+  transition: all 0.2s ease-in-out;
 }
 .user-connection-container button {
   border-radius:20px;
@@ -38,6 +39,10 @@
 .user-connection-container.patient button:hover {
   background-color:var(--darkGreen);
   color:white;
+}
+.user-connection-container:hover {
+  transform: scale(1.02);
+  box-shadow: var(--heavyBoxShadow);
 }
 .user-connection-container.doctor button {
   color: var(--darkBlue);
@@ -68,4 +73,8 @@
     width:50%;
     margin:20px;
   }
+}
+
+.connection-button:hover {
+  cursor: pointer;
 }

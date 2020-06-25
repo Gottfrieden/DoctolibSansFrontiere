@@ -1,4 +1,4 @@
-h2, h3 {
+#new-prescription-title {
   text-align:center;
   width:100%;
   background-color:white;
@@ -45,12 +45,12 @@ h2, h3 {
   flex-direction:column;
   align-items:flex-start;
 }
-#renew-frequency {
+#renewable-frequency {
   opacity:0;
   display:none;
   transition:all 0.2s ease-in-out;
 }
-#renew-frequency.visible {
+#renewable-frequency.visible {
   opacity:1;
   display:flex; 
   align-items:center;

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const NewDrugs = ({drug, index, handleChange, handleChangeCheckBox}) => {
+const NewDrugs = ({ drug, index, handleChange, handleChangeCheckBox }) => {
   return (
     <div className='NewPrescription-drug-container'>
         <div className='new-drug-name-container'>
@@ -34,7 +34,7 @@ const NewDrugs = ({drug, index, handleChange, handleChangeCheckBox}) => {
         </div>
         <textarea name='additional_information' placeholder='additional information' onChange={e => handleChange(e, index)} value={drug.additional_information}/>
     </div>
-  )
-}
+  );
+};
 
-export default NewDrugs
+export default NewDrugs;
