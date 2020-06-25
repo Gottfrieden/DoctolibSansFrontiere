@@ -16,16 +16,16 @@ const NewDrugs = ({ drug, index, handleChange, handleChangeCheckBox }) => {
           <input type='number' name='frequency' min='0' onChange={e => handleChange(e, index)} value={drug.frequency}/>
         </div>
 
-        <div className='newPrescription-ligne'>
-          <input type="checkbox" name="breakfast" onChange={e => handleChangeCheckBox(e, index)} value={drug.breakfast}/>
-          <label htmlFor="breakfast">Breakfast</label>
+      <div className='newPrescription-ligne'>
+        <input type='checkbox' name='breakfast' onChange={e => handleChangeCheckBox(e, index)} value={drug.breakfast} />
+        <label htmlFor='breakfast'>Breakfast</label>
 
-          <input type="checkbox" name="lunch" onChange={e => handleChangeCheckBox(e, index)} value={drug.lunch}/>
-          <label htmlFor="lunch">Lunch</label>
+        <input type='checkbox' name='lunch' onChange={e => handleChangeCheckBox(e, index)} value={drug.lunch} />
+        <label htmlFor='lunch'>Lunch</label>
 
-          <input type="checkbox" name="diner" onChange={e => handleChangeCheckBox(e, index)} value={drug.diner}/>
-          <label htmlFor="diner">Diner</label>
-        </div>
+        <input type='checkbox' name='diner' onChange={e => handleChangeCheckBox(e, index)} value={drug.diner} />
+        <label htmlFor='diner'>Diner</label>
+      </div>
 
         <div className='treatment-duration-container'>
           <label htmlFor='traitment_duration'>Treatment duration :</label>
