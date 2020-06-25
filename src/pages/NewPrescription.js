@@ -120,6 +120,11 @@ const NewPrescription = () => {
     setnewPresctiption(nextState)
   }
 
+  const handleNumberOfRenew = () => {
+    const r = document.getElementById('renew-frequency');
+    r.classList.toggle('visible');
+  }
+
   return (
     <div>
       <div>
@@ -127,42 +132,47 @@ const NewPrescription = () => {
       </div>
       <form onSubmit={handleSubmit}>
         <div className='NewPrescription-presciption-container'>
-          <h3>Prescription</h3>
+          <div className='global-info content-container'>
+            <div className='newPrescription-ligne'>
+              <label htmlFor="duration">Duration :</label>
+              <input type='number' min='0' id="duration" onChange={e => setnewPresctiption({...newPresctiption, duration : e.target.value})} value={newPresctiption.duration}/>
+            </div>
 
-          <div className='newPrescription-ligne'>
-            <label htmlFor="duration">duration :</label>
-            <input type='number' min='0' id="duration" onChange={e => setnewPresctiption({...newPresctiption, duration : e.target.value})} value={newPresctiption.duration}/>
+            <div className='newPrescription-ligne'>
+              <label htmlFor="duration">Number of drugs</label>
+              <input type='number' min='0' id="drugs_number" onChange={e => setnewPresctiption({...newPresctiption, drugs_number : e.target.value})} value={newPresctiption.drugs_number}/>
+            </div>
+
+            <div className='newPrescription-ligne renewable-container'>
+              <div className='renewable-checkbox-container'>
+                <label htmlFor="renewable">Renewable</label>
+                <input type="checkbox" id="renewable" onClick={handleNumberOfRenew} onChange={e => setnewPresctiption({...newPresctiption, renewable : !newPresctiption.renewable})} value={newPresctiption.renewable}/>
+              </div>
+              <div id='renew-frequency'>
+                <label htmlFor="renewable_time" >How many times ?</label>
+                <input type='number' min='0' id="renewable_time" onChange={e => setnewPresctiption({...newPresctiption, renewable_time : e.target.value})} value={newPresctiption.renewable_time}/>
+              </div>
+            </div>
+
+            <div className='title-blue-background'>
+              <p>Patient</p>
+            </div>
+
+            <div className='newPrescription-ligne civility-fn-ln-container'>
+              <select name="civility" onChange={e => setnewPresctiption({...newPresctiption, patient : {...newPresctiption.patient, civility : e.target.value }})} value={newPresctiption.patient.civility}>
+                <option value="mr">Mr</option>
+                <option value="ms">Ms</option>
+                <option value="mrs">Mrs</option>
+              </select>
+
+              <div className='firstname-lastname-container'>
+                <input type='text' placeholder='firstname' onChange={e => setnewPresctiption({...newPresctiption, patient : {...newPresctiption.patient, firstname : e.target.value }})} value={newPresctiption.patient.firstname}/>
+                <input type='text' placeholder='lastname' onChange={e => setnewPresctiption({...newPresctiption, patient : {...newPresctiption.patient, lastname : e.target.value }})} value={newPresctiption.patient.lastname}/>
+              </div>
+            </div>
+
+            <input type='email' placeholder='email' onChange={e => setnewPresctiption({...newPresctiption, patient : {...newPresctiption.patient, email : e.target.value }})} value={newPresctiption.patient.email}/>
           </div>
-
-          <div className='newPrescription-ligne'>
-            <label htmlFor="duration">drugs number</label>
-            <input type='number' min='0' id="drugs_number" onChange={e => setnewPresctiption({...newPresctiption, drugs_number : e.target.value})} value={newPresctiption.drugs_number}/>
-          </div>
-
-          <div className='newPrescription-ligne'>
-          <input type="checkbox" id="renewable" onChange={e => setnewPresctiption({...newPresctiption, renewable : !newPresctiption.renewable})} value={newPresctiption.renewable}/>
-          <label htmlFor="renewable">renewable</label>
-
-          <input type='number' min='0' id="renewable_time" onChange={e => setnewPresctiption({...newPresctiption, renewable_time : e.target.value})} value={newPresctiption.renewable_time}/>
-          <label htmlFor="renewable_time" >time(s)</label>
-          </div>
-
-          <div>
-            <p>Patient</p>
-          </div>
-
-          <div className='newPrescription-ligne'>
-            <select name="civility" onChange={e => setnewPresctiption({...newPresctiption, patient : {...newPresctiption.patient, civility : e.target.value }})} value={newPresctiption.patient.civility}>
-              <option value="mr">Mr</option>
-              <option value="ms">Ms</option>
-              <option value="mrs">Mrs</option>
-            </select>
-
-            <input type='text' placeholder='firstname' onChange={e => setnewPresctiption({...newPresctiption, patient : {...newPresctiption.patient, firstname : e.target.value }})} value={newPresctiption.patient.firstname}/>
-            <input type='text' placeholder='lastname' onChange={e => setnewPresctiption({...newPresctiption, patient : {...newPresctiption.patient, lastname : e.target.value }})} value={newPresctiption.patient.lastname}/>
-          </div>
-
-          <input type='email' placeholder='email' onChange={e => setnewPresctiption({...newPresctiption, patient : {...newPresctiption.patient, email : e.target.value }})} value={newPresctiption.patient.email}/>
         </div>
         <h3>Drugs</h3>
 

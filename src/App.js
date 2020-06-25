@@ -32,7 +32,7 @@ function App() {
           <Route exact path='/connection' component={Connection} />
           <Route exact path='/user/patient' component={RegisterPatient} />
           <Route exact path='/user/doctor' component={RegisterDoctor} />
-          <Route exact path='/user/doctor/:id/prescription/new' component={NewPrescription} />
+          <Route exact path='/new-prescription' component={NewPrescription} />
           <Route exact path='/user/doctor/:id/prescription/history' component={PrescriptionHistory} />
           <Route exact path='/user/patient/:id' component={PatientAccount} />
           <Route exact path='/user/doctor/:id' component={DoctorAccount} />
