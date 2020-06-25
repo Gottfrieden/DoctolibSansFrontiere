@@ -17,16 +17,16 @@ const Header = (props) => {
             <Link to='/connection'>Connection</Link>
           </li>
           <li>
-            <Link to='/user/patient/:id/agenda'>Agenda</Link>
+            <Link to='/patient/agenda'>Agenda</Link>
           </li>
           <li>
-            <Link to='/patient/my-prescription'>My Prescriptions</Link>
+            <Link to='/patient/prescriptions'>My Prescriptions</Link>
           </li>
           <li>
             <Link to='/doctor/new-prescription'>New Prescription</Link>
           </li>
           <li>
-            <Link to='/user/doctor/:id/prescription/history'>Prescriptions History</Link>
+            <Link to='/doctor/prescriptions'>Prescriptions History</Link>
           </li>
         </ul>
       </nav>

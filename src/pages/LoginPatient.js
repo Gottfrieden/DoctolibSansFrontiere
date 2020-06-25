@@ -19,7 +19,7 @@ const LoginPatient = () => {
           </label>
           <input type='password' name='password' />
         </div>
-        <Link to='/user/patient/:id/prescriptions'><button id='signin-patient'>Sign In</button></Link>
+        <Link to='/patient/prescriptions'><button id='signin-patient'>Sign In</button></Link>
       </form>
     </main>
   );

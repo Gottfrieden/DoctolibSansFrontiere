@@ -4,7 +4,7 @@ import moment from 'moment';
 import QRCode from 'react-qr-code';
 
 export default function PrescriptionSummary (props) {
-  const p = props.singlePrescription;
+  const p = props.singleDoctorPrescription;
   useEffect(() => {
     console.log(p.status);
   }, []);
