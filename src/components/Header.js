@@ -20,10 +20,10 @@ const Header = (props) => {
             <Link to='/user/patient/:id/agenda'>Agenda</Link>
           </li>
           <li>
-            <Link to='/user/patient/:id/prescription'>My Prescriptions</Link>
+            <Link to='/patient/my-prescription'>My Prescriptions</Link>
           </li>
           <li>
-            <Link to='user/doctor/:id/prescription/new'>New Prescription</Link>
+            <Link to='/doctor/NewPrescription'>New Prescription</Link>
           </li>
           <li>
             <Link to='/user/doctor/:id/prescription/history'>Prescriptions History</Link>
