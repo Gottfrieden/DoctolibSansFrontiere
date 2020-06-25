@@ -4,7 +4,7 @@ import moment from 'moment';
 import { Link } from 'react-router-dom';
 import '../styles/DoctorPrescriptions.css';
 
-const PrescriptionHistory = () => {
+const DoctorPrescriptions = () => {
   const [prescriptions, setPrescriptions] = useState([]);
 
   useEffect(() => {
@@ -19,25 +19,27 @@ const PrescriptionHistory = () => {
   }, []);
 
   return (
-    <div className='prescriptions-main-container'>
-
+    <div className='main-container'>
       <h2>My prescriptions</h2>
-      <div className='search-prescriptions'>
-        <input className='search-background' type='search' placeholder='Search' />
-      </div>
-      <main id='list-all-prescriptions' className='main-container'>
-        {prescriptions.map(p =>
-          <Link to='/single-doctor-prescription' key={p.id}>
-            <div style={{ backgroundColor: 'pink' }}>
-              <p>Delivered {moment.unix(p.created_at.seconds).format('MMMM, DD Do YYYY')} at {moment.unix(p.created_at.seconds).format('h:mm:ss a')}</p>
-              <p>{p.patient_firstname}</p>
-              <p>{p.patient_name}</p>
-            </div>
-          </Link>)}
 
-      </main>
-    </div>
+      
+        <div className='search-background'>
+          <input className='search-prescriptions' type='search' placeholder='Search' />
+        </div>
+        <div className='list-all-prescriptions'>
+          {prescriptions.map(p =>
+            <Link to='/single-doctor-prescription' key={p.id}>
+              <div style={{ backgroundColor: 'lightblue' }}>
+                <p>Delivered {moment.unix(p.created_at.seconds).format('MMMM, DD Do YYYY')} at {moment.unix(p.created_at.seconds).format('h:mm:ss a')}</p>
+                <p>{p.patient_firstname}</p>
+                <p>{p.patient_name}</p>
+              </div>
+            </Link>)}
+        </div>
+
+      </div>
+    
   );
 };
 
-export default PrescriptionHistory;
+export default DoctorPrescriptions;
