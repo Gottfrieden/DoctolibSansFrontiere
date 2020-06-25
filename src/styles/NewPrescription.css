@@ -1,4 +1,4 @@
-h2 {
+h2, h3 {
   text-align:center;
   width:100%;
   background-color:white;
@@ -13,7 +13,11 @@ h2 {
   display: flex;
   flex-direction: column;
 }
-
+.treatment-duration-container {
+  display:flex;
+  align-items:center;
+  margin-bottom:30px;
+}
 .NewPrescription-presciption-container{
   display: flex;
   flex-direction: column;
@@ -58,4 +62,59 @@ h2 {
 }
 #renew-frequency.visible input {
   width:50px;
+}
+.add-new-drug {
+  padding: 16px 20px;
+  min-width: 300px;
+  max-width:740px;
+  margin: 0 auto;
+  /* text-align: center; */
+  width: calc(100% - 40px);
+  background-color: var(--darkGreen);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  display: block;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity:0.9;
+  transition:all 0.2s ease-in-out;
+  cursor:pointer;
+}
+.add-new-drug span.add-new {
+  background-image:url('../images/add.png');
+  background-position:center;
+  background-size:cover;
+  width:20px;
+  height:20px;
+  display:block;
+  margin-right:10px;
+}
+.add-new-drug:hover {
+  opacity:1;
+}
+.new-drug-container {
+  margin-bottom:20px;
+}
+.new-drug-name-container {
+  background-color: var(--lightGreen);
+  width: calc(100% + 20px);
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid var(--lightGreen);
+  padding:5px 10px;
+}
+.new-drug-name-container input {
+  background-color:white;
+  border-radius: 6px;
+  width:calc(100% - 20px);
+  margin-top:5px;
+  margin-bottom:5px;
+  font-size:18px;
+}
+.new-drug-name-container input::placeholder {
+  font-size:18px;
 }
