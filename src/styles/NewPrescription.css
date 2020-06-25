@@ -1,0 +1,13 @@
+.newPrescription-ligne{
+  display: flex;
+}
+
+.NewPrescription-drug-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.NewPrescription-presciption-container{
+  display: flex;
+  flex-direction: column;
+}
