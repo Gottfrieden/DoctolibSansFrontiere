@@ -1,13 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../images/logo.png';
+import '../styles/Header.css';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
+      <Link to='/'>
+        <div className='logo-container'>
+          <img src={Logo} alt='Ordoli' />
+        </div>
+      </Link>
       <nav>
         <ul>
           <li>
-            <Link to='/'>Home</Link>
+            <Link to='/connection'>Connection</Link>
           </li>
           <li>
             <Link to='/user/patient'>Register as a Patient</Link>

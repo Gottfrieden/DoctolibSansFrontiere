@@ -1,0 +1,25 @@
+header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px;
+  background-color:#eef9fe;
+}
+header img {
+  width:100px;
+  height:100px;
+}
+header nav ul {
+  display:inline-block;
+}
+header nav ul li {
+  display:inline;
+  margin:0 10px;
+}
+header nav ul li a {
+  font-weight:700;
+  color:#0a4063;
+  font-family:gilroy;
+  text-decoration:none;
+  font-size:18px;
+}
