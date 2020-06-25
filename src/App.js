@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { 
+import React from 'react';
+import {
   BrowserRouter as Router,
   Route,
   Switch
@@ -18,17 +18,14 @@ import Agenda from './pages/Agenda';
 import SeePrescription from './pages/SeePrescription';
 import Connection from './pages/Connection';
 import SinglePrescription from './pages/SinglePrescription';
+import SingleDoctorPrescription from './pages/SingleDoctorPrescription';
 import './fonts/gilroy.css';
 
-function App() {
-
-  const [doctorConnection, setDoctorConnection] = useState(false);
-  const [patientConnection, setPatientConnection] = useState(false);
-
+function App () {
   return (
     <Router>
       <div className='App'>
-        <Header doctorConnection={doctorConnection} patientConnection={patientConnection}/>
+        <Header />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/connection' component={Connection} />
@@ -41,6 +38,7 @@ function App() {
           <Route exact path='/user/patient/:id/agenda' component={Agenda} />
           <Route exact path='/user/patient/:id/prescriptions' component={SeePrescription} />
           <Route exact path='/prescriptions/:prescriptionId' component={SinglePrescription}/>
+          <Route exact path='/single-doctor-prescription' component={SingleDoctorPrescription} />
         </Switch>
       </div>
     </Router>

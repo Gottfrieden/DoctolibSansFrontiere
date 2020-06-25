@@ -7,5 +7,5 @@ export default function Drugs () {
       <h2>Medication</h2>
       <SingleDrug />
     </div>
-  )
+  );
 }

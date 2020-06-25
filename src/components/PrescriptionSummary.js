@@ -31,9 +31,9 @@ export default function PrescriptionSummary (props) {
           </div>
         </div>
         <div className='renew-container-bottom'>
-            <p>Renouvelable 1 fois</p>
+          <p>Renouvelable 1 fois</p>
         </div>
       </div>
     </>
-  )
+  );
 }
