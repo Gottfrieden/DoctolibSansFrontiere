@@ -9,3 +9,7 @@ footer {
   background-color: var(--darkBlue);
   color: white;
 }
+
+footer p {
+  text-align: center;
+}
