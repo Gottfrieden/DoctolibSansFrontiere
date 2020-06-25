@@ -6,6 +6,7 @@ header {
   background-color:var(--lightBlue);
   position: absolute;
   top: 0;
+  width:calc(100% - 40px);
 }
 header img {
   width:100px;

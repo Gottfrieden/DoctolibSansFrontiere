@@ -73,3 +73,8 @@
   margin-block-start:0;
   font-size:14px;
 }
+.qrcode-container {
+  margin: 30px auto;
+  width:200px;
+
+}
