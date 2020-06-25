@@ -9,15 +9,13 @@ export default function SinglePrescripion (props) {
   const [singlePrescription, setSinglePrescription] = useState(null);
   const params = props.match.params;
 
-
   useEffect(() => {
     fb.firestore().collection('prescriptions').doc(params.prescriptionId).get()
       .then(doc => setSinglePrescription(doc.data()))
-        .catch(err => console.error(err));
+      .catch(err => console.error(err));
   }, [params.prescriptionId]);
 
-  
-  if(!singlePrescription) {
+  if (!singlePrescription) {
     return null;
   } else {
     return (

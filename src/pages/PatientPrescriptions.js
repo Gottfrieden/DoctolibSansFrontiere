@@ -24,7 +24,7 @@ const PatientPrescriptions = () => {
       <main id='seeprescription-main-container' className='main-container'>
         <div className='patient-prescriptions-container'>
           {prescriptions.map(p => {
-            return(
+            return (
               <Link to={`/patient/prescriptions/${p.id}`}>
                 <div className='patient-prescription-container'>
                   <div className='prescription-status'>
@@ -38,7 +38,7 @@ const PatientPrescriptions = () => {
                   </div>
                 </div>
               </Link>
-            )
+            );
           })}
         </div>
       </main>
