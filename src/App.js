@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import LoginPatient from './pages/LoginPatient';
 import LoginDoctor from './pages/LoginDoctor';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import PrescriptionHistory from './pages/PrescriptionHistory';
 import NewPrescription from './pages/NewPrescription';
 import PatientAccount from './pages/PatientAccount';
@@ -40,6 +41,7 @@ function App () {
           <Route exact path='/single-prescription' component={SinglePrescription} />
           <Route exact path='/single-doctor-prescription' component={SingleDoctorPrescription} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

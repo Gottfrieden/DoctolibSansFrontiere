@@ -4,6 +4,7 @@ header {
   justify-content:space-between;
   padding:20px;
   background-color:#eef9fe;
+  height: 8vh;
 }
 header img {
   width:100px;

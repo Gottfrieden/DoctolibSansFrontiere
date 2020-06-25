@@ -21,6 +21,14 @@
 .login-form button {
   width: 100%;
   margin-top: 10px;
-  background-color: var(--darkBlue);
+  color: white;
   padding: 10px 0;
+}
+
+#signin-patient {
+  background-color: var(--darkGreen);
+}
+
+#signin-doctor {
+  background-color: var(--darkBlue);
 }
