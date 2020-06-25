@@ -1,3 +1,9 @@
+.doctor-prescription-main-container {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
 .search-prescriptions { 
     margin:10px 0px 10px 5px;
     border-radius:15px 15px 15px 15px;
@@ -20,26 +26,16 @@
    
  }
  @media screen and (min-width: 750px) {
-
-.search-prescriptions { 
-    margin:10px 0px 10px 5px;
-    border-radius:15px 15px 15px 15px;
-    width:200px;
-    height:30px;
-}
-.search-background {
-    background-color: var(--darkBlue);
-    border-radius:15px 15px 0 0;
-    width:1400px;
-    height:60px;
-    margin:5px 0px 0px 10px;
-}
-.list-all-prescriptions {
-   width:1400px;
-   margin:5px 0px 0px 10px;
-
-   
-
+    .search-prescriptions { 
+        margin:10px 0px 10px 5px;
+        border-radius:15px 15px 15px 15px;
+        width:200px;
+        height:30px;
+    }
+    .search-background {
+        background-color: var(--darkBlue);
+        border-radius:15px 15px 0 0;
+        height:60px;
+    }
  }
-}
 

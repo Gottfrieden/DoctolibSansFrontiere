@@ -1,8 +1,11 @@
 
 main#seeprescription-main-container {
-  width:95%;
+  width:calc(100% - 40px);
   margin:0 auto;
-  min-height:87vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 h2 {
   text-align:center;
@@ -86,5 +89,8 @@ h2 {
   .patient-prescriptions-container .patient-prescription-container .prescription-delivery-date p, .patient-prescriptions-container .patient-prescription-container .prescription-doctor-name p {
     margin-block-end:0px;
     margin-block-start:0px;
+  }
+  .patient-prescriptions-container {
+    justify-content:flex-start;
   }
 }
