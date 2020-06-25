@@ -175,16 +175,16 @@ const NewPrescription = () => {
         {newPresctiption.drugs.map((drug, index) => {
           return (
             <div className='new-drug-container content-container'>
-              <NewDrugs drug={drug} index={index} handleChange={handleChange} handleChangeCheckBox={handleChangeCheckBox}/>
+              <NewDrugs drug={drug} index={index} handleChange={handleChange} handleChangeCheckBox={handleChangeCheckBox} />
             </div>
-          )
-        })} 
+          );
+        })}
 
         <input type='submit' value='valid' />
       </form>
       <button className='add-new-drug' onClick={handleNewDrug}><span className='add-new' />New Drug</button>
     </main>
-  )
-}
+  );
+};
 
 export default NewPrescription;
