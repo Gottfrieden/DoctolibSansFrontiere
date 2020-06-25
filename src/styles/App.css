@@ -6,10 +6,11 @@ h2 {
 }
 .content-container {
   padding:20px;
-  box-shadow:0 0 7px grey;
-  width:330px;
+  box-shadow:var(--heavyBoxShadow);
+  width:300px;
   margin:0 auto;
   border-radius:15px;
+  background-color:white;
 }
 .time-image {
   background-image:url('../images/time.png');

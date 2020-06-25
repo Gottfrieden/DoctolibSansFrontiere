@@ -19,4 +19,6 @@ code {
   --lightGreen:#b3ddca;
   --lightGrey: #efefef;
   --lightGreyText: #7a7a7a;
+  --heavyBoxShadow:1px 1px 6px rgba(0,0,0,.1);
+  --lightBoxShadow: 0 0 15px rgba(0,0,0,.1);
 }

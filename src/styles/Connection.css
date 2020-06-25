@@ -8,7 +8,7 @@
   justify-content:center;
   padding:30px;
   border-radius:10px;
-  box-shadow:0 0 7px grey;
+  box-shadow:var(--heavyBoxShadow);
   color:white;
   margin:20px 0;
 }
@@ -24,12 +24,26 @@
   border:none;
   margin-block-end:none;
   font-size:18px;
+  cursor:pointer;
+  transition:all 0.2s ease-in-out;
+  border:1px solid transparent;
+}
+.user-connection-container button:hover {
+  border:1px solid white
+}
+.user-connection-container.doctor button:hover {
+  background-color:var(--darkBlue);
+  color:white;
+}
+.user-connection-container.patient button:hover {
+  background-color:var(--darkGreen);
+  color:white;
 }
 .user-connection-container.doctor button {
-  color:#0a4063;
+  color: var(--darkBlue);
 }
 .user-connection-container.patient button {
-  color:#6b9560;
+  color:var(--darkGreen);
 }
 .user-connection-container h2 {
   margin-block-end:0px;
@@ -37,8 +51,21 @@
   font-weight:700;
 }
 .user-connection-container.doctor {
-  background-color:#0a4063;
+  background-color:var(--darkBlue);
 }
 .user-connection-container.patient {
-  background-color:#6b9560;
+  background-color:var(--darkGreen);
+}
+
+@media all and (min-width:980px) and (orientation:landscape) {
+  .connection-container {
+    display:flex;
+    width:900px;
+    margin:auto;
+    justify-content:space-between;
+  }
+  .user-connection-container {
+    width:50%;
+    margin:20px;
+  }
 }

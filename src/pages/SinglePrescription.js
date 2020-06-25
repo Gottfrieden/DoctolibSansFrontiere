@@ -4,7 +4,6 @@ import '../styles/SinglePrescription.css';
 import PrescriptionSummary from '../components/PrescriptionSummary';
 import Drugs from '../components/Drugs';
 
-
 export default function SinglePrescription () {
   return (
     <div className='single-prescription-container'>

@@ -27,7 +27,7 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div className='App'>
         <Header doctorConnection={doctorConnection} patientConnection={patientConnection}/>
         <Switch>
           <Route exact path='/' component={Home} />
