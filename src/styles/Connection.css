@@ -42,3 +42,7 @@
 .user-connection-container.patient {
   background-color:#6b9560;
 }
+
+.connection-button:hover {
+  cursor: pointer;
+}
