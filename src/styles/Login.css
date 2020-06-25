@@ -1,9 +1,10 @@
 #login-title {
-  margin: 60px;
+  margin: 20px 0;
 }
 
 .login-form {
   width: 290px;
+  box-shadow:var(--lightBoxShadow);
 }
 
 .login-form-field {
