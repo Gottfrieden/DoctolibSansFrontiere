@@ -23,7 +23,8 @@ const PrescriptionHistory = () => {
       <h2>My prescriptions</h2>
       <main id='prescription-main-container' className='main-container'>
         <div className='search-background'>
-          <input type='search' placeholder='Rechercher' />
+          <input className='search-prescriptions' type='search' placeholder='Search' />
+        </div>
           <div className='list-all-prescriptions'>
             {prescriptions.map(p =>
               <Link to='/single-doctor-prescription' key={p.id}>
@@ -34,7 +35,7 @@ const PrescriptionHistory = () => {
                 </div>
               </Link>)}
           </div>
-        </div>
+        
       </main>
     </>
   );
