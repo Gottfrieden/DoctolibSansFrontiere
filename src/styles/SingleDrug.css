@@ -21,7 +21,10 @@
 .single-drug-container .single-drug-content-container .image-content-container {
   display:flex;
   align-items:center;
-  margin-bottom:10px;
+  margin-bottom:20px;
+}
+.single-drug-container .single-drug-content-container .image-content-container:nth-last-of-type(1) {
+  margin-bottom:0px;
 }
 .single-drug-container .single-drug-content-container .image-content-container span {
   width:15px;

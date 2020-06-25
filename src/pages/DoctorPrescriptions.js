@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import fb from '../services/firebase';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import '../styles/PrescriptionHistory.css';
+import '../styles/DoctorPrescriptions.css';
 
 const PrescriptionHistory = () => {
   const [prescriptions, setPrescriptions] = useState([]);
@@ -19,13 +19,13 @@ const PrescriptionHistory = () => {
   }, []);
 
   return (
-    <>
-      <h2>My prescriptions</h2>
-      <main id='prescription-main-container' className='main-container'>
-        <div className='search-background'>
-          <input className='search-prescriptions' type='search' placeholder='Search' />
-        </div>
-          <div className='list-all-prescriptions'>
+    <div className="prescriptions-main-container">
+      
+       <h2>My prescriptions</h2>
+      <div className='search-prescriptions'>
+          <input className='search-background' type='search' placeholder='Search' />
+      </div>   
+      <main id='list-all-prescriptions' className='main-container'>
             {prescriptions.map(p =>
               <Link to='/single-doctor-prescription' key={p.id}>
                 <div style={{ backgroundColor: 'pink' }}>
@@ -34,10 +34,10 @@ const PrescriptionHistory = () => {
                   <p>{p.patient_name}</p>
                 </div>
               </Link>)}
-          </div>
         
+  
       </main>
-    </>
+    </div>
   );
 };
 
