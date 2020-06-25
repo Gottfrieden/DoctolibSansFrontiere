@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import fb from '../services/firebase';
 import '../styles/PrescriptionSummary.css';
 
-export default function PrescriptionSummary () {
+export default function PrescriptionSummary (props) {
+
   return (
     <>
       <h2>Summary</h2>

@@ -40,7 +40,7 @@ function App() {
           <Route exact path='/user/doctor/:id' component={DoctorAccount} />
           <Route exact path='/user/patient/:id/agenda' component={Agenda} />
           <Route exact path='/user/patient/:id/prescriptions' component={SeePrescription} />
-          <Route exact path='/single-ordonnance' component={SinglePrescription}/>
+          <Route exact path='/prescriptions/:prescriptionId' component={SinglePrescription}/>
         </Switch>
       </div>
     </Router>
