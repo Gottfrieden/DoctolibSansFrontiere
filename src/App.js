@@ -39,6 +39,7 @@ function App () {
           <Route exact path='/patient/prescriptions' component={PatientPrescriptions} />
           <Route exact path='/patient/prescriptions/:prescriptionId' component={SinglePrescription}/>
           <Route exact path='/single-doctor-prescription' component={SingleDoctorPrescription} />
+          <Route exact path='/patient/my-prescription' component={SeePrescription} />
         </Switch>
       </div>
     </Router>
