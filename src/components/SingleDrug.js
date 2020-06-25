@@ -1,26 +1,35 @@
 import React from 'react';
 import '../styles/SingleDrug.css';
 
-export default function SingleDrug () {
+export default function SingleDrug (props) {
+  console.log(props.singlePrescription);
+
   return (
-    <div className='single-drug-container content-container'>
-      <div className='drug-name'>
-        <h3>Doliprane 1000mg</h3>
-      </div>
-      <div className='single-drug-content-container'>
-        <div className='image-content-container'>
-          <span className='time-image' />
-          <p>1 pill 3x per days</p>
+    <>
+    {props.singlePrescription !== undefined && props.singlePrescription.drugs.map(d => {
+          return (
+            <div className='single-drug-container content-container'>
+          <div className='drug-name'>
+            <h3>{d.name}</h3>
+          </div>
+          <div className='single-drug-content-container'>
+            <div className='image-content-container'>
+              <span className='time-image' />
+              <p>{d.quantity} {d.quantity > 1 ? 'pills' : 'pill'} {d.frequency}x per days</p>
+            </div>
+            <div className='image-content-container'>
+              <span className='calendar-image' />
+              <p>For {d.traitment_duration} days</p>
+            </div>
+            <div className='image-content-container'>
+              <span className='info-image' />
+              <p>{d.additional_information}</p>
+            </div>
+          </div>
         </div>
-        <div className='image-content-container'>
-          <span className='calendar-image' />
-          <p>For 5 days</p>
-        </div>
-        <div className='image-content-container'>
-          <span className='info-image' />
-          <p>Before each meal</p>
-        </div>
-      </div>
-    </div>
+      )
+    })}
+
+    </>
   );
 }

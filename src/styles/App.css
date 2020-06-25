@@ -4,6 +4,10 @@ h1, h2, h3, h4, h5, h6, p {
 h2 {
   font-size:28px;
 }
+.light-weight-text {
+  font-weight:100;
+  font-size:14px;
+}
 .content-container {
   padding:20px;
   box-shadow:var(--heavyBoxShadow);
