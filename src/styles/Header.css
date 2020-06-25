@@ -1,0 +1,26 @@
+header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px;
+  background-color:var(--lightBlue);
+}
+header img {
+  width:100px;
+  height:100px;
+}
+header nav ul {
+  display:inline-block;
+  padding: 0;
+}
+header nav ul li {
+  display:inline;
+  margin:0 10px;
+}
+header nav ul li a {
+  font-weight:700;
+  color:var(--darkBlue);
+  font-family:gilroy;
+  text-decoration:none;
+  font-size:18px;
+}

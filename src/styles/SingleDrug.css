@@ -1,0 +1,41 @@
+.single-drug-container {
+  position:relative;
+}
+.single-drug-container.content-container .drug-name {
+  position:absolute;
+  top:0;
+  left:0;
+  width:calc(100% - 40px);
+  height:20px;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  background-color:var(--darkBlue);
+  padding:10px 20px;
+  border-radius:15px 15px 0 0;
+  color:white;
+}
+.single-drug-container .single-drug-content-container {
+  margin-top:40px;
+}
+.single-drug-container .single-drug-content-container .image-content-container {
+  display:flex;
+  align-items:center;
+  margin-bottom:20px;
+}
+.single-drug-container .single-drug-content-container .image-content-container:nth-last-of-type(1) {
+  margin-bottom:0px;
+}
+.single-drug-container .single-drug-content-container .image-content-container span {
+  width:15px;
+  height:15px;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  margin-right:10px;
+  margin-top:-5px;
+}
+.single-drug-container .single-drug-content-container .image-content-container p {
+  margin-block-end:0px;
+  margin-block-start:0px;
+}

@@ -1,0 +1,38 @@
+#login-title {
+  margin: 60px;
+}
+
+.login-form {
+  width: 290px;
+}
+
+.login-form-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.login-form input {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  padding: 10px 0;
+}
+
+#signin-patient {
+  background-color: var(--darkGreen);
+}
+
+#signin-doctor {
+  background-color: var(--darkBlue);
+}
