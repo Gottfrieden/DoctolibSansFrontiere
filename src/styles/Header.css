@@ -3,8 +3,7 @@ header {
   align-items:center;
   justify-content:space-between;
   padding:20px;
-  background-color:#eef9fe;
-  height: 8vh;
+  background-color:var(--lightBlue);
 }
 header img {
   width:100px;
@@ -20,7 +19,7 @@ header nav ul li {
 }
 header nav ul li a {
   font-weight:700;
-  color:#0a4063;
+  color:var(--darkBlue);
   font-family:gilroy;
   text-decoration:none;
   font-size:18px;

@@ -5,11 +5,13 @@ h1, h2, h3, h4, h5, h6, p {
 h2 {
   font-size:28px;
 }
-
+.light-weight-text {
+  font-weight:100;
+  font-size:14px;
+}
 a {
   text-decoration: none;
 }
-
 button {
   border-radius: 5px;
   background-color: white;
@@ -25,13 +27,13 @@ button {
   font-weight: 600;
   text-decoration: none;
 }
-
 .content-container {
   padding:20px;
-  box-shadow:0 0 7px grey;
+  box-shadow:var(--heavyBoxShadow);
   width:300px;
   margin:0 auto;
   border-radius:15px;
+  background-color:white;
 }
 
 .time-image {

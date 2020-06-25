@@ -1,37 +1,40 @@
 import React from 'react';
 import '../styles/PrescriptionSummary.css';
+import moment from 'moment';
 
-export default function PrescriptionSummary () {
+export default function PrescriptionSummary (props) {
+  const p = props.singlePrescription;
   return (
     <>
       <h2>Summary</h2>
       <div className='prescription-summary-container content-container'>
         <div className='first-line'>
-          <h3>Ordonnance n°5211</h3>
-          <p>Delivered on 12 december 2012</p>
+          <h3>Reference: <span className='light-weight-text'>{props.params.prescriptionId}</span></h3>
+          <p>{p.status === 'canceled' ? `Canceled on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}` : `Delivered on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}`}</p>
         </div>
-        <p className='doctor-name'>Dr. Baptiste Courgibet</p>
+        <p className='doctor-name'>Dr. {p.doctor.firstname} {p.doctor.lastname}</p>
         <div className='adress-phone-container'>
           <div className='adress-container'>
-            <p>11 rue du truc</p>
-            <p>69002 Lyon</p>
+            <p>{p.doctor.adress_number} {p.doctor.adress_street_type} {p.doctor.adress_street}</p>
+            <p>{p.doctor.adress_cp} {p.doctor.adress_city}</p>
           </div>
-          <p>04.78.12.12.12</p>
+          <p>{p.doctor.tel}</p>
         </div>
         <div className='medication-info-container'>
           <div className='image-content-container'>
             <span className='pill-image' />
-            <p>3 médicaments</p>
+            <p>{p.drugs_number} pills</p>
           </div>
           <div className='image-content-container'>
             <span className='calendar-image' />
-            <p>2 semaines</p>
+            <p>{p.drugs.duration} {p.drugs.duration === 1 ? 'jour' : 'jours'}</p>
           </div>
         </div>
         <div className='renew-container-bottom'>
-          <p>Renouvelable 1 fois</p>
+          <p>{p.renewable && p.renewable_time >= 1 ? p.renewable_time === 1 ? `Renewable ${p.renewable_time} time` : `Renewable ${p.renewable_time} times` : 'Non Renewable'}</p>
         </div>
       </div>
+        )
     </>
   );
 }

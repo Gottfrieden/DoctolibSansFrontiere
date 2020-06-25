@@ -23,18 +23,19 @@ const PrescriptionHistory = () => {
       <h2>My prescriptions</h2>
       <main id='prescription-main-container' className='main-container'>
         <div className='search-background'>
-          <input type='search' placeholder='Rechercher' />
-          <div className='list-all-prescriptions'>
-            {prescriptions.map(p =>
-              <Link to='/single-doctor-prescription' key={p.id}>
-                <div style={{ backgroundColor: 'pink' }}>
-                  <p>Delivered {moment.unix(p.created_at.seconds).format('MMMM, DD Do YYYY')} at {moment.unix(p.created_at.seconds).format('h:mm:ss a')}</p>
-                  <p>{p.patient_firstname}</p>
-                  <p>{p.patient_name}</p>
-                </div>
-              </Link>)}
-          </div>
+          <input className='search-prescriptions' type='search' placeholder='Search' />
         </div>
+        <div className='list-all-prescriptions'>
+          {prescriptions.map(p =>
+            <Link to='/single-doctor-prescription' key={p.id}>
+              <div style={{ backgroundColor: 'pink' }}>
+                <p>Delivered {moment.unix(p.created_at.seconds).format('MMMM, DD Do YYYY')} at {moment.unix(p.created_at.seconds).format('h:mm:ss a')}</p>
+                <p>{p.patient_firstname}</p>
+                <p>{p.patient_name}</p>
+              </div>
+            </Link>)}
+        </div>
+
       </main>
     </>
   );
