@@ -19,7 +19,7 @@ const LoginDoctor = () => {
           </label>
           <input type='password' name='password' />
         </div>
-        <Link to='/user/doctor/:id/prescription/history'><button id='signin-doctor'>Sign In</button></Link>
+        <Link to='/doctor/prescriptions'><button id='signin-doctor'>Sign In</button></Link>
       </form>
     </main>
   );

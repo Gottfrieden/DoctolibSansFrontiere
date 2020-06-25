@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../images/logo.png';
 import '../styles/Header.css';
 
 const Header = (props) => {
+  console.log(window.location.href)
+  const [url, setUrl] = useState(window.location.href);
+
+  useEffect(() => {
+    setUrl(window.location.href)
+  }, [url])
+
   return (
     <header>
       <Link to='/'>
@@ -14,19 +21,19 @@ const Header = (props) => {
       <nav>
         <ul>
           <li>
-            <Link to='/connection'>Connection</Link>
+            {url.includes('connection') && <Link to='/connection'>Sign in</Link>}
           </li>
           <li>
-            <Link to='/user/patient/:id/agenda'>Agenda</Link>
+            {url.includes('patient') && <Link to='/patient/agenda'>Agenda</Link>}
           </li>
           <li>
-            <Link to='/patient/my-prescription'>My Prescriptions</Link>
+            {url.includes('patient') && <Link to='/patient/prescriptions'>My Prescriptions</Link>}
           </li>
           <li>
-            <Link to='/doctor/new-prescription'>New Prescription</Link>
+            {url.includes('doctor') && <Link to='/doctor/new-prescription'>New Prescription</Link>}
           </li>
           <li>
-            <Link to='/user/doctor/:id/prescription/history'>Prescriptions History</Link>
+          {url.includes('doctor') && <Link to='/doctor/prescriptions'>Prescriptions History</Link>}
           </li>
         </ul>
       </nav>

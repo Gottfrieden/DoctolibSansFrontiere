@@ -5,9 +5,6 @@ import QRCode from "react-qr-code";
 
 export default function PrescriptionSummary (props) {
   const p = props.singlePrescription;
-  useEffect(() => {
-    console.log(p.status)
-  }, [])
   return (
     <>
       <h2>Summary</h2>
