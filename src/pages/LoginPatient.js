@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/Login.css';
 
 const LoginPatient = () => {
   return (
@@ -8,15 +9,17 @@ const LoginPatient = () => {
       <form className='login-form content-container'>
         <div className='login-form-field'>
           <label htmlFor='email' name='email'>
-            <input type='email' name='email' />
+            Email
           </label>
+          <input type='email' name='email' />
         </div>
         <div className='login-form-field'>
           <label htmlFor='password' name='password'>
-            <input type='password' name='password' />
+            Password
           </label>
+          <input type='password' name='password' />
         </div>
-        <Link to='/user/patient/:id/prescriptions'><button>Sign In</button></Link>
+        <Link to='/user/patient/:id/prescriptions'><button id='signin-patient'>Sign In</button></Link>
       </form>
     </main>
   );

@@ -1,19 +1,15 @@
 footer {
-    align-items:center;
-    justify-content:space-between;
-    padding:20px;
-    background-color:#eef9fe;
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:50px;
-    }
-    footer p {
-    font-weight:700;
-    color:#0a4063;
-    text-align: center;
-    font-family:gilroy;
-    text-decoration:none;
-    font-size:18px;
-    }
-    
+  display: flex;
+  width: calc(100% - 40px);
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  position: fixed; bottom: 0;
+  padding: 20px;
+  background-color: var(--darkBlue);
+  color: white;
+}
+
+footer p {
+  text-align: center;
+}

@@ -6,7 +6,7 @@ export default function Connection () {
     <div className='connection-container'>
       <div className='user-connection-container doctor'>
         <h2>I'm a doctor</h2>
-        <p>Create prescriptions and sen them directly to your patients.</p>
+        <p>Create prescriptions and send them directly to your patients.</p>
         <Link to='/user/doctor'><button className='connection-button doctor'>Connection</button></Link>
       </div>
       <div className='user-connection-container patient'>

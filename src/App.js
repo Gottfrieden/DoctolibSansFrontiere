@@ -38,11 +38,11 @@ function App () {
           <Route exact path='/user/doctor/:id' component={DoctorAccount} />
           <Route exact path='/user/patient/:id/agenda' component={Agenda} />
           <Route exact path='/patient/prescriptions' component={PatientPrescriptions} />
-          <Route exact path='/patient/prescriptions/:prescriptionId' component={SinglePrescription}/>
+          <Route exact path='/patient/prescriptions/:prescriptionId' component={SinglePrescription} />
           <Route exact path='/single-doctor-prescription' component={SingleDoctorPrescription} />
-          <Route exact path='/patient/my-prescription' component={SeePrescription} />
+          <Route exact path='/patient/my-prescription' component={PatientPrescriptions} />
         </Switch>
-       <Footer /> 
+        <Footer />
       </div>
     </Router>
   );
