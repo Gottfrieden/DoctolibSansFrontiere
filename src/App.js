@@ -21,7 +21,8 @@ import SinglePrescription from './pages/SinglePrescription';
 import SingleDoctorPrescription from './pages/SingleDoctorPrescription';
 import './fonts/gilroy.css';
 
-function App () {
+function App() {
+
   return (
     <Router>
       <div className='App'>
@@ -31,8 +32,13 @@ function App () {
           <Route exact path='/connection' component={Connection} />
           <Route exact path='/user/patient' component={RegisterPatient} />
           <Route exact path='/user/doctor' component={RegisterDoctor} />
+<<<<<<< HEAD
           <Route exact path='/user/doctor/:id/prescription/new' component={NewPrescription} />
           <Route exact path='/user/doctor/:id/prescription/history' component={DoctorPrescriptions} />
+=======
+          <Route exact path='/new-prescription' component={NewPrescription} />
+          <Route exact path='/user/doctor/:id/prescription/history' component={PrescriptionHistory} />
+>>>>>>> dev
           <Route exact path='/user/patient/:id' component={PatientAccount} />
           <Route exact path='/user/doctor/:id' component={DoctorAccount} />
           <Route exact path='/user/patient/:id/agenda' component={Agenda} />

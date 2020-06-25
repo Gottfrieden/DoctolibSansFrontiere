@@ -25,3 +25,26 @@ h2 {
 .info-image {
   background-image:url('../images/info.png');
 }
+input, select, textarea {
+  border:1px solid var(--lightBlue);
+  padding:10px;
+  font-family:gilroy;
+  color:var(--darkBlue);
+}
+label {
+  font-family:gilroy;
+  margin-right:20px;
+}
+input {
+  margin-right:20px;
+}
+input::placeholder {
+  color:var(--darkBlue);
+  font-family:gilroy;
+  font-size:14px;
+}
+@media all and (min-width:900px) {
+  .content-container {
+    width:700px;
+  }
+}
