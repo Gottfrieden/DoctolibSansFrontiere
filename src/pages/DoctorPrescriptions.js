@@ -19,7 +19,7 @@ const DoctorPrescriptions = () => {
   }, []);
 
   return (
-    <main>
+    <main className='doctor-prescription-main-container'>
       <h2>My prescriptions</h2>
 
     <div className='main-container'>

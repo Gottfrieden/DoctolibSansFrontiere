@@ -35,9 +35,9 @@ function App () {
           <Route exact path='/doctor/new-prescription' component={NewPrescription} />
           <Route exact path='/user/patient' component={LoginPatient} />
           <Route exact path='/user/doctor' component={LoginDoctor} />
-          <Route exact path='/user/patient/:id' component={PatientAccount} />
-          <Route exact path='/user/doctor/:id' component={DoctorAccount} />
-          <Route exact path='/user/patient/:id/agenda' component={Agenda} />
+          <Route exact path='/user/patient/account' component={PatientAccount} />
+          <Route exact path='/user/doctor/account' component={DoctorAccount} />
+          <Route exact path='/user/patient/agenda' component={Agenda} />
           <Route exact path='/patient/prescriptions' component={PatientPrescriptions} />
           <Route exact path='/patient/prescriptions/:prescriptionId' component={SinglePrescription} />
           <Route exact path='/single-doctor-prescription' component={SingleDoctorPrescription} />
