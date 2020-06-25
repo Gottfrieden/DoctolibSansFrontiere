@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import fb from '../services/firebase';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 const PrescriptionHistory = () => {
   const [prescriptions, setPrescriptions] = useState([]);
@@ -24,11 +25,13 @@ const PrescriptionHistory = () => {
           <input type='search' placeholder='Rechercher' />
           <div>
             {prescriptions.map(p =>
-              <div key={p.id}>
-                <p>Delivered {moment.unix(p.created_at.seconds).format('MMMM, DD Do YYYY')} at {moment.unix(p.created_at.seconds).format('h:mm:ss a')}</p>
-                <p>{p.patient_firstname}</p>
-                <p>{p.patient_name}</p>
-              </div>)}
+              <Link to='/single-doctor-prescription' key={p.id}>
+                <div style={{ backgroundColor: 'pink' }}>
+                  <p>Delivered {moment.unix(p.created_at.seconds).format('MMMM, DD Do YYYY')} at {moment.unix(p.created_at.seconds).format('h:mm:ss a')}</p>
+                  <p>{p.patient_firstname}</p>
+                  <p>{p.patient_name}</p>
+                </div>
+              </Link>)}
           </div>
         </div>
       </main>

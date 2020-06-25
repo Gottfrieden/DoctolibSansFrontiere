@@ -4,12 +4,12 @@ import '../styles/SinglePrescription.css';
 import PrescriptionSummary from '../components/PrescriptionSummary';
 import Drugs from '../components/Drugs';
 
-export default function SinglePrescription () {
+export default function SingleDoctorPrescription () {
   return (
     <div className='single-prescription-container'>
       <div className='back-to-all'>
         <p>
-          <Link to='/user/patient/:id/prescriptions'>My Prescriptions</Link>
+          <Link to='/user/doctor/:id/prescription/history'>My Prescriptions</Link>
         </p>
       </div>
       <PrescriptionSummary />
