@@ -26,7 +26,7 @@ const Header = (props) => {
             <Link to='/user/patient/:id/agenda'>Agenda</Link>
           </li>
           <li>
-            <Link to='/user/patient/:id/prescription'>My Prescriptions</Link>
+            <Link to='/user/patient/:id/prescriptions'>My Prescriptions</Link>
           </li>
           <li>
             <Link to='/user/patient/:id'>My account</Link>
