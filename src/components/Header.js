@@ -32,7 +32,7 @@ const Header = (props) => {
             <Link to='/user/patient/:id'>My account</Link>
           </li>
           <li>
-            <Link to='/user/doctor/:id/prescription/new'>New Prescription</Link>
+            <Link to='user/doctor/:id/prescription/new'>New Prescription</Link>
           </li>
           <li>
             <Link to='/user/doctor/:id/prescription/history'>Prescriptions History</Link>

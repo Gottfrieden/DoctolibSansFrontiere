@@ -1,5 +1,5 @@
 import React  , { useEffect, useState } from 'react';
-import fb from '../firebase'
+import fb from '../services/firebase'
 import NewDrugs from '../components/NewDrugs';
 import produce from "immer";
 
