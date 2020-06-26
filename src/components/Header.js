@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../images/logo.png';
+import Logo from '../images/logo-2.png';
 import '../styles/Header.css';
 
 const Header = ({ login, handleChangeLogin }) => {
