@@ -1,7 +1,11 @@
 
-#seeprescription-main-container {
-  width:95%;
-  margin:auto;
+main#seeprescription-main-container {
+  width:calc(100% - 40px);
+  margin:0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 h2 {
   text-align:center;
@@ -9,8 +13,9 @@ h2 {
 }
 .patient-prescriptions-container {
   position:relative;
-  max-width:600px;
-  margin:auto;
+  width:100%;
+  max-width:800px;
+  margin:0 auto;
 }
 .patient-prescriptions-container .patient-prescription-container {
   display:flex;
@@ -65,7 +70,7 @@ h2 {
   margin-left:50px;
 }
 .patient-prescriptions-container .patient-prescription-container .prescription-delivery-date p {
-  margin-block-end:0px;
+  margin-block-end:5px;
   margin-block-start:4px;
 }
 .patient-prescriptions-container .patient-prescription-container .prescription-doctor-name p {
@@ -84,5 +89,8 @@ h2 {
   .patient-prescriptions-container .patient-prescription-container .prescription-delivery-date p, .patient-prescriptions-container .patient-prescription-container .prescription-doctor-name p {
     margin-block-end:0px;
     margin-block-start:0px;
+  }
+  .patient-prescriptions-container {
+    justify-content:flex-start;
   }
 }

@@ -4,6 +4,10 @@ header {
   justify-content:space-between;
   padding:20px;
   background-color:var(--lightBlue);
+  position: absolute;
+  top: 0;
+  width:calc(100% - 40px);
+  z-index:999999999;
 }
 header img {
   width:100px;

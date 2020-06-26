@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -13,34 +13,42 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import DoctorPrescriptions from './pages/DoctorPrescriptions';
 import NewPrescription from './pages/NewPrescription';
-import PatientAccount from './pages/PatientAccount';
-import DoctorAccount from './pages/DoctorAccount';
 import Agenda from './pages/Agenda';
 import PatientPrescriptions from './pages/PatientPrescriptions';
 import Connection from './pages/Connection';
 import SinglePrescription from './pages/SinglePrescription';
 import SingleDoctorPrescription from './pages/SingleDoctorPrescription';
+import DoctorPrescriptionValidation from './pages/DoctorPrescriptionsValidation';
 import './fonts/gilroy.css';
 
+
 function App () {
+  const [login, setLogin] = useState('') 
+
+  const handleChangeLogin = (log) => {
+    setLogin(log)
+  }
+
   return (
     <Router>
       <div className='App'>
-        <Header />
+        <Header login={login} handleChangeLogin={handleChangeLogin}/>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/connection' component={Connection} />
-          <Route exact path='/user/doctor/:id/prescription/history' component={DoctorPrescriptions} />
+          <Route exact path='/doctor/prescriptions' component={DoctorPrescriptions} />
           <Route exact path='/doctor/new-prescription' component={NewPrescription} />
-          <Route exact path='/user/patient' component={LoginPatient} />
-          <Route exact path='/user/doctor' component={LoginDoctor} />
-          <Route exact path='/user/patient/:id' component={PatientAccount} />
-          <Route exact path='/user/doctor/:id' component={DoctorAccount} />
-          <Route exact path='/user/patient/:id/agenda' component={Agenda} />
+          <Route exact path='/user/patient' >
+            <LoginPatient handleChangeLogin={handleChangeLogin}/>  
+          </Route>
+          <Route exact path='/user/doctor' >
+            <LoginDoctor handleChangeLogin={handleChangeLogin}/>  
+          </Route>
+          <Route exact path='/patient/agenda' component={Agenda} />
           <Route exact path='/patient/prescriptions' component={PatientPrescriptions} />
           <Route exact path='/patient/prescriptions/:prescriptionId' component={SinglePrescription} />
-          <Route exact path='/single-doctor-prescription' component={SingleDoctorPrescription} />
-          <Route exact path='/patient/my-prescription' component={PatientPrescriptions} />
+          <Route exact path='/doctor/prescriptions/:prescriptionId' component={SingleDoctorPrescription} />
+          <Route exact path='/doctor/prescriptions-validation' component={DoctorPrescriptionValidation} />
         </Switch>
         <Footer />
       </div>

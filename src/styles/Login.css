@@ -1,5 +1,6 @@
 #login-title {
-  margin: 60px;
+  margin: 10px 0 20px 0;
+  text-transform:uppercase;
 }
 
 .login-form {
@@ -18,8 +19,7 @@
   margin: 10px 0px;
   padding: 10px;
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 1px solid var(--darkBlue);
 }
 
 .login-form button {
@@ -27,6 +27,13 @@
   margin-top: 10px;
   color: white;
   padding: 10px 0;
+  transition: all 0.2s ease-in-out;
+  border:1px solid transparent;
+}
+.login-form button:hover {
+  background-color:white!important;
+  color:var(--darkBlue);
+  border:1px solid var(--darkBlue);
 }
 
 #signin-patient {
