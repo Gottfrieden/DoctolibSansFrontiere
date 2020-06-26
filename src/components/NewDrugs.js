@@ -4,7 +4,15 @@ const NewDrugs = ({ drug, index, handleChange, handleChangeCheckBox }) => {
   return (
     <div className='NewPrescription-drug-container'>
         <div className='new-drug-name-container'>
-          <input type='text' name='name' placeholder='name' onChange={e => handleChange(e, index)} value={drug.name}/>
+          <select name='name' onChange={e => handleChange(e, index)} value={drug.name}>
+            <option value=''>Select drug</option>
+            <option value='Dolipran'>Dolipran</option>
+            <option value='Advil'>Advil</option>
+            <option value='Spasfon'>Spasfon</option>
+            <option value='Dafalgan'>Dafalgan</option>
+            <option value='Nurofen'>Nurofen</option>
+          </select>
+          {/* <input type='text' name='name' placeholder='name' onChange={e => handleChange(e, index)} value={drug.name}/> */}
         </div>
         <div className='newPrescription-ligne'>
           <label htmlFor="quantity">What Quantity?</label>

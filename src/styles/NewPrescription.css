@@ -185,6 +185,9 @@
   color:var(--darkBlue);
   border-top:1px solid var(--darkBlue)
 }
+.new-drug-name-container select {
+  width: 100%;
+}
 @media all and (min-width:900px) {
   .civility-container {
     flex-direction:row;
