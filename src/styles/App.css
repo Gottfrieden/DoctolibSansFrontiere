@@ -16,7 +16,6 @@ a {
   text-decoration: none;
 }
 button {
-  border-radius: 5px;
   background-color: white;
   padding: 5px 15px;
   text-transform: uppercase;
@@ -31,12 +30,17 @@ button {
   text-decoration: none;
 }
 .content-container {
-  padding:20px;
-  box-shadow:var(--heavyBoxShadow);
+  padding:30px;
   width:300px;
   margin:0 auto;
-  border-radius:15px;
   background-color:white;
+  transition:all .3s ease-in-out;
+  border:1px solid var(--darkBlue);
+}
+.content-container:hover {
+  box-shadow:var(--contentContainerHoverShadow);
+  transform:scale(1.01);
+  background-color:var(--lightBlue);
 }
 
 .time-image {

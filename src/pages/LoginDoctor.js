@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const LoginDoctor = () => {
   return (
     <main className='main-container'>
-      <h2 id='login-title'>Doctor Log in</h2>
       <form className='login-form content-container'>
+        <h2 id='login-title'>Log In</h2>
         <div className='login-form-field'>
           <label htmlFor='email' name='email'>
             Email

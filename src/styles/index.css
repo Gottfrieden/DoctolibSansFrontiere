@@ -12,11 +12,12 @@ body {
   --darkBlue: #0a4063;
   --lightBlue: #eef9fe;
   --darkGreen:#6b9560;
-  --lightGreen:#b3ddca;
+  --lightGreen:#f6fef6;
   --lightGrey: #efefef;
   --lightGreyText: #7a7a7a;
   --heavyBoxShadow:1px 1px 2px rgba(0,0,0,.1);
   --lightBoxShadow: 0 0 15px rgba(0,0,0,.1);
+  --contentContainerHoverShadow: 1px 1px 3px rgba(0,0,0,.1);
 }
 
 .main-container {

@@ -14,8 +14,6 @@
   align-items:flex-start;
   justify-content:center;
   padding:30px;
-  border-radius:10px;
-  box-shadow:var(--heavyBoxShadow);
   margin: 0px 0px 20px 0px;
   transition: all 0.2s ease-in-out;
   border: 1px solid var(--darkBlue);
@@ -23,7 +21,6 @@
   color: var(--darkBlue);
 }
 .user-connection-container button {
-  border-radius:6px;
   background-color:white;
   padding:5px 15px;
   text-transform:uppercase;
@@ -37,6 +34,9 @@
   cursor:pointer;
   transition:all 0.2s ease-in-out;
 }
+.user-connection-container:hover {
+  box-shadow:var(--lightBoxShadow);
+}
 .user-connection-container button:hover {
   border:1px solid white
 }
@@ -47,7 +47,8 @@
 }
 .user-connection-container.patient button:hover {
   background-color:white;
-  color:white;
+  color:var(--darkGreen);
+  border:1px solid var(--darkGreen);
 }
 .user-connection-container:hover {
   transform: scale(1.02);
@@ -78,7 +79,12 @@
   border:1px solid var(--darkBlue);
 }
 .user-connection-container.patient {
-  background-color:var(--darkGreen);
+  background-color:white;
+  border:1px solid var(--darkGreen);
+  color:#424242;
+}
+.user-connection-container.patient:hover {
+  background-color:var(--lightGreen);
 }
 .connection-button:hover {
   cursor: pointer;
