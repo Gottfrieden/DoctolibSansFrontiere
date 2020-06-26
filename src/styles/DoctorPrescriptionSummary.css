@@ -1,0 +1,37 @@
+.prescription-status-container {
+  width:100px;
+  height:100px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.prescription-status-container.scanned {
+  background-image:url('../images/check.png');
+}
+.prescription-status-container.canceled {
+  background-image:url('../images/canceled.png');
+}
+.prescription-status-container.waiting {
+  background-image:url('../images/time-light-grey.png');
+}
+.summary-status-container {
+  width:100px;
+  height:140px;
+  margin:30px auto;
+}
+.summary-status-container .status-info {
+  text-align: center;
+  display: block;
+  font-weight:bold;
+  font-size:18px;
+  margin-top:10px;
+}
+.summary-status-container .status-info.canceled {
+  color:var(--lightRed);
+}
+.summary-status-container .status-info.scanned {
+  color:var(--darkGreen);
+}
+.summary-status-container .status-info.waiting {
+  color:var(--lightGreyText);
+}

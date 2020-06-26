@@ -4,7 +4,7 @@ import SingleDrug from './SingleDrug';
 export default function Drugs (props) {
   return (
     <div className='all-drugs-container'>
-      <h2>Medication</h2>
+      <h2 className='title-with-line'>Medication</h2>
       <SingleDrug params={props.params} singlePrescription={props.singlePrescription} />
     </div>
   );

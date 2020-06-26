@@ -1,0 +1,50 @@
+.validation-animation-container {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translateY(-50%) translateX(-50%);
+  width: 300px;
+  height:300px;
+  background-color:white;
+  z-index: 99999;
+  animation-name:validationFadeIn;
+  animation-duration:2.4s;
+  animation-fill-mode: forwards;
+  border:1px solid var(--darkGreen);
+}
+.validation-animation-container p {
+  text-align:center;
+  color:var(--darkGreen);
+  margin-block-start:0px;
+}
+@keyframes validationFadeIn {
+  0% {
+    opacity:1;
+    z-index:99999
+  }
+  80% {
+    opacity:1;
+    z-index:99999
+  }
+  100% {
+    opacity:0;
+    z-index:-1;
+  }
+
+}
+.validation-animation-container .validation-animation {
+  width:200px;
+  height:200px;
+  background-size:cover;
+  margin:auto;
+  background-position:center;
+  background-image:url('../images/validation.gif');
+}
+main#seeprescription-main-container {
+  padding:10vh 0;
+}
+@media all and (min-width:900px) {
+  main#seeprescription-main-container {
+    padding:30vh 0;
+  }
+}

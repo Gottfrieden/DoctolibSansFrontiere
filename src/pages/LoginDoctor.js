@@ -5,19 +5,13 @@ import { Link } from 'react-router-dom';
 const LoginDoctor = ({ handleChangeLogin }) => {
   return (
     <main className='main-container'>
-      <h2 id='login-title'>Doctor Log in</h2>
       <form className='login-form content-container'>
+        <h2 id='login-title'>Log In</h2>
         <div className='login-form-field'>
-          <label htmlFor='email' name='email'>
-            Email
-          </label>
-          <input type='email' name='email' />
+          <input type='email' name='email' placeholder='Your email address'/>
         </div>
         <div className='login-form-field'>
-          <label htmlFor='password' name='password'>
-            Password
-          </label>
-          <input type='password' name='password' />
+          <input type='password' name='password' placeholder='Your paswword'/>
         </div>
         <Link to='/doctor/prescriptions'><button onClick={() => handleChangeLogin('doctor')} id='signin-doctor'>Sign In</button></Link>
       </form>
