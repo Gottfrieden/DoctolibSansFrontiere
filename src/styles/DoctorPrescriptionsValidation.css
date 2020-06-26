@@ -1,3 +1,6 @@
+#seeprescription-main-container {
+  padding: 17vh 0!important;
+}
 .validation-animation-container {
   position:absolute;
   top:50%;
@@ -45,6 +48,6 @@ main#seeprescription-main-container {
 }
 @media all and (min-width:900px) {
   main#seeprescription-main-container {
-    padding:30vh 0;
+    padding:14vh 0;
   }
 }
