@@ -11,11 +11,12 @@ import '../styles/Agenda.css';
 const Agenda = () => {
   const [prescriptions, setPrescriptions] = useState([]);
   const [events, setEvents] = useState([]);
-  const userMail = 'demo@gmail.com';
+  // const userMail = 'demo@gmail.com';
+  // .filter(d => d.data().patient.email === userMail)
 
   useEffect(() => {
     const getAllPrescriptions = fb.firestore().collection('prescriptions').onSnapshot(s => {
-      setPrescriptions(s.docs.filter(d => d.data().patient.email === userMail).map(prescription => {
+      setPrescriptions(s.docs.map(prescription => {
         return {
           date: moment.unix(prescription.data().created_at.seconds).format('yyyy-MM-DD'),
           drugs: prescription.data().drugs

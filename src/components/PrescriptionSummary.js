@@ -1,19 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/PrescriptionSummary.css';
 import moment from 'moment';
 import QRCode from "react-qr-code";
 
 export default function PrescriptionSummary (props) {
+
   const p = props.singlePrescription;
+
   return (
     <>
-      <div className='prescription-summary-container content-container'>
+      <div className='prescription-summary-container content-container' >
         <div className='first-line'>
           <h3>Reference: <span className='light-weight-text'>{props.params.prescriptionId}</span></h3>
           <p>{p.status === 'canceled' ? `Canceled on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}` : `Delivered on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}`}</p>
         </div>
-        <div className='qrcode-container'>
+        <div className={p.status === 'waiting' ? 'qrcode-container' : 'hidden'}>
           <QRCode value={`http://vboua-a7f20b70.localhost.run/${props.params.prescriptionId}`} size={200}/>
+        </div>
+        <div className={p.status !== 'waiting' ? 'summary-status-container' : 'hidden'}>
+          <div className={`prescription-status-container ${p.status}`}/>
+          <span className={`status-info ${p.status}`}>{p.status === "waiting" ? `${p.status} for scan` : p.status}</span>
         </div>
         <p className='doctor-name'>Dr. {p.doctor.firstname} {p.doctor.lastname}</p>
         <div className='adress-phone-container'>
