@@ -2,7 +2,7 @@ import fb from '../services/firebase';
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import '../styles/PatientPrescriptions.css';
+import '../styles/DoctorPrescriptions.css';
 
 const PatientPrescriptions = () => {
   const [prescriptions, setPrescriptions] = useState([]);
@@ -21,7 +21,12 @@ const PatientPrescriptions = () => {
   return (
     <>
       <main id='seeprescription-main-container' className='main-container'>
-        <div className='create-new-button'>Create new prescription</div>
+        
+        <Link to='/doctor/new-prescription' >
+          <div className='create-new-button'>
+            <span className='add-icon' />Create new prescription
+          </div>
+        </Link>
         <div className='patient-prescriptions-container'>
           <h1 className='title-with-line'>Prescriptions</h1>
           <div className={prescriptions === undefined ? 'loader' : 'loader invisible'} />

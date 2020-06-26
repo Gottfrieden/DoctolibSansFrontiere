@@ -80,14 +80,23 @@ main#seeprescription-main-container {
   #seeprescription-main-container .create-new-button {
     background-color:var(--lightGreen);
     color:var(--darkGreen);
-    border:1xp solid var(--darkGreen);
-    width:200px;
+    border:1px solid var(--darkGreen);
+    width:250px;
     height:30px;
     display:flex;
     align-items:center;
     justify-content:center;
-
   }
+  #seeprescription-main-container .create-new-button .add-icon {
+    width:20px;
+    height:20px;
+    background-image:url('../images/add-dark-green.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    margin-right:10px;
+  }
+  
   @media all and (min-width:900px) {
     .patient-prescriptions-container .patient-prescription-container .prescription-doctor-name {
       position:absolute;
