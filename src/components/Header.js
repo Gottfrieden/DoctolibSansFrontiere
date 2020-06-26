@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../images/logo.png';
 import '../styles/Header.css';
 
-const Header = (props) => {
-  const [url, setUrl] = useState(window.location.href);
-
-  useEffect(() => {
-    console.log(window.location.href)
-    setUrl(window.location.href)
-  }, [url])
-
-  const handleClick = () => {
-    setUrl(window.location.href)
-  }
+const Header = ({ login, handleChangeLogin }) => {
 
   return (
     <header>
@@ -25,19 +15,19 @@ const Header = (props) => {
       <nav>
         <ul>
           <li>
-            <Link to='/connection' onClick={handleClick}>Sign in</Link>
+            <Link onClick={() => handleChangeLogin('')} to='/connection'>{login ? 'Sign out' : 'Sign in'}</Link>
           </li>
           <li>
-            {url.includes('patient') && <Link to='/patient/agenda'>Agenda</Link>}
+            {login === 'patient' && <Link to='/patient/agenda'>Agenda</Link>}
           </li>
           <li>
-            {url.includes('patient') && <Link to='/patient/prescriptions'>My Prescriptions</Link>}
+            {login === 'patient' && <Link to='/patient/prescriptions'>My Prescriptions</Link>}
           </li>
           <li>
-            {url.includes('doctor') && <Link to='/doctor/new-prescription'>New Prescription</Link>}
+            {login === 'doctor' && <Link to='/doctor/new-prescription'>New Prescription</Link>}
           </li>
           <li>
-          {url.includes('doctor') && <Link to='/doctor/prescriptions'>Prescriptions History</Link>}
+            {login === 'doctor' && <Link to='/doctor/prescriptions'>Prescriptions History</Link>}
           </li>
         </ul>
       </nav>

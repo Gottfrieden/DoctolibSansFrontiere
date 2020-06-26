@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Login.css';
 import { Link } from 'react-router-dom';
 
-const LoginDoctor = () => {
+const LoginDoctor = ({ handleChangeLogin }) => {
   return (
     <main className='main-container'>
       <h2 id='login-title'>Doctor Log in</h2>
@@ -19,7 +19,7 @@ const LoginDoctor = () => {
           </label>
           <input type='password' name='password' />
         </div>
-        <Link to='/doctor/prescriptions'><button id='signin-doctor'>Sign In</button></Link>
+        <Link to='/doctor/prescriptions'><button onClick={() => handleChangeLogin('doctor')} id='signin-doctor'>Sign In</button></Link>
       </form>
     </main>
   );
