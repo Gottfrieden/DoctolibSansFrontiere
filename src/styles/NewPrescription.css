@@ -179,7 +179,8 @@
   text-transform:uppercase;
   z-index:99999;
   height:80px;
-  animation:all 0.2s ease-in-out;
+  transition:all 0.2s ease-in-out;
+  cursor:pointer;
 }
 .save-prescription:hover {
   background-color:var(--lightBlue);
