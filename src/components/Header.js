@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import Logo from '../images/logo.png';
 import '../styles/Header.css';
 
-const Header = (props) => {
+const Header = ({ login, handleChangeLogin }) => {
+
   return (
     <header>
       <Link to='/'>
@@ -14,19 +15,19 @@ const Header = (props) => {
       <nav>
         <ul>
           <li>
-            <Link to='/connection'>Connection</Link>
+            <Link onClick={() => handleChangeLogin('')} to='/connection'>{login ? 'Sign out' : 'Sign in'}</Link>
           </li>
           <li>
-            <Link to='/user/patient/:id/agenda'>Agenda</Link>
+            {login === 'patient' && <Link to='/patient/agenda'>Agenda</Link>}
           </li>
           <li>
-            <Link to='/patient/my-prescription'>My Prescriptions</Link>
+            {login === 'patient' && <Link to='/patient/prescriptions'>My Prescriptions</Link>}
           </li>
           <li>
-            <Link to='/doctor/new-prescription'>New Prescription</Link>
+            {login === 'doctor' && <Link to='/doctor/new-prescription'>New Prescription</Link>}
           </li>
           <li>
-            <Link to='/user/doctor/:id/prescription/history'>Prescriptions History</Link>
+            {login === 'doctor' && <Link to='/doctor/prescriptions'>Prescriptions History</Link>}
           </li>
         </ul>
       </nav>
