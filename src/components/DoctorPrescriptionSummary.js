@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/PrescriptionSummary.css';
+import '../styles/DoctorPrescriptionSummary.css';
 import moment from 'moment';
 import QRCode from "react-qr-code";
 
 export default function PrescriptionSummary (props) {
   const p = props.singlePrescription;
+  useEffect(() => {
+    console.log(p.status)
+  }, [])
   return (
     <>
       <div className='prescription-summary-container content-container'>
@@ -12,17 +16,11 @@ export default function PrescriptionSummary (props) {
           <h3>Reference: <span className='light-weight-text'>{props.params.prescriptionId}</span></h3>
           <p>{p.status === 'canceled' ? `Canceled on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}` : `Delivered on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}`}</p>
         </div>
-        <div className='qrcode-container'>
-          <QRCode value={`ordoli-side-app.netlify.app/${props.params.prescriptionId}`} size={200}/>
+        <div className='summary-status-container'>
+          <div className={`prescription-status-container ${p.status}`}/>
+          <span className={`status-info ${p.status}`}>{p.status === "waiting" ? `${p.status} for scan` : p.status}</span>
         </div>
-        <p className='doctor-name'>Dr. {p.doctor.firstname} {p.doctor.lastname}</p>
-        <div className='adress-phone-container'>
-          <div className='adress-container'>
-            <p>{p.doctor.adress_number} {p.doctor.adress_street_type} {p.doctor.adress_street}</p>
-            <p>{p.doctor.adress_cp} {p.doctor.adress_city}</p>
-          </div>
-          <p>{p.doctor.tel}</p>
-        </div>
+        <p className='doctor-name'>{p.patient.firstname} {p.patient.lastname}</p>
         <div className='medication-info-container'>
           <div className='image-content-container'>
             <span className='pill-image' />

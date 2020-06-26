@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import fb from '../services/firebase';
 import NewDrugs from '../components/NewDrugs';
 import produce from 'immer';
@@ -126,9 +127,9 @@ const NewPrescription = () => {
   };
 
   return (
-    <main className='main-container'>
+    <main className='main-container new-prescription-main'>
       <div>
-        <h2 id='new-prescription-title'>New Prescription</h2>
+        <h2 id='new-prescription-title' className='title-with-line'>New Prescription</h2>
       </div>
       <form onSubmit={handleSubmit}>
         <div className='NewPrescription-presciption-container content-container'>
@@ -181,7 +182,9 @@ const NewPrescription = () => {
           );
         })}
 
-        <input type='submit' value='valid' />
+        <Link to='/doctor/prescriptions-validation'>
+          <input type='submit' className='save-prescription' value='Create Prescription' />
+        </Link>
       </form>
       <button className='add-new-drug' onClick={handleNewDrug}><span className='add-new' />New Drug</button>
     </main>

@@ -5,7 +5,7 @@ export default function SingleDrug (props) {
   console.log(props.singlePrescription);
 
   return (
-    <>
+    <div>
       {props.singlePrescription !== undefined && props.singlePrescription.drugs.map(d => {
         return (
           <div key={d.name} className='single-drug-container content-container'>
@@ -28,8 +28,8 @@ export default function SingleDrug (props) {
             </div>
           </div>
         );
-      })}
-
-    </>
+      })
+    }
+    </div>
   );
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import '../styles/DoctorPrescriptions.css';
+import '../styles/DoctorPrescriptionsValidation.css';
 
 const PatientPrescriptions = () => {
   const [prescriptions, setPrescriptions] = useState([]);
@@ -21,6 +22,10 @@ const PatientPrescriptions = () => {
   return (
     <>
       <main id='seeprescription-main-container' className='main-container'>
+        <div className='validation-animation-container'>
+          <div className='validation-animation' />
+          <p>Prescription created</p>
+        </div>
         
         <Link to='/doctor/new-prescription' >
           <div className='create-new-button'>

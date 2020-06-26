@@ -18,6 +18,7 @@ import PatientPrescriptions from './pages/PatientPrescriptions';
 import Connection from './pages/Connection';
 import SinglePrescription from './pages/SinglePrescription';
 import SingleDoctorPrescription from './pages/SingleDoctorPrescription';
+import DoctorPrescriptionValidation from './pages/DoctorPrescriptionsValidation';
 import './fonts/gilroy.css';
 
 
@@ -46,7 +47,8 @@ function App () {
           <Route exact path='/patient/agenda' component={Agenda} />
           <Route exact path='/patient/prescriptions' component={PatientPrescriptions} />
           <Route exact path='/patient/prescriptions/:prescriptionId' component={SinglePrescription} />
-          <Route exact path='/single-doctor-prescription' component={SingleDoctorPrescription} />
+          <Route exact path='/doctor/prescriptions/:prescriptionId' component={SingleDoctorPrescription} />
+          <Route exact path='/doctor/prescriptions-validation' component={DoctorPrescriptionValidation} />
         </Switch>
         <Footer />
       </div>
