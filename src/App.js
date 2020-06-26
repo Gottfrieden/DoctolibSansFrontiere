@@ -21,28 +21,27 @@ import SingleDoctorPrescription from './pages/SingleDoctorPrescription';
 import DoctorPrescriptionValidation from './pages/DoctorPrescriptionsValidation';
 import './fonts/gilroy.css';
 
-
 function App () {
-  const [login, setLogin] = useState('') 
+  const [login, setLogin] = useState('');
 
   const handleChangeLogin = (log) => {
-    setLogin(log)
-  }
+    setLogin(log);
+  };
 
   return (
     <Router>
       <div className='App'>
-        <Header login={login} handleChangeLogin={handleChangeLogin}/>
+        <Header login={login} handleChangeLogin={handleChangeLogin} />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/connection' component={Connection} />
           <Route exact path='/doctor/prescriptions' component={DoctorPrescriptions} />
           <Route exact path='/doctor/new-prescription' component={NewPrescription} />
-          <Route exact path='/user/patient' >
-            <LoginPatient handleChangeLogin={handleChangeLogin}/>  
+          <Route exact path='/user/patient'>
+            <LoginPatient handleChangeLogin={handleChangeLogin} />
           </Route>
-          <Route exact path='/user/doctor' >
-            <LoginDoctor handleChangeLogin={handleChangeLogin}/>  
+          <Route exact path='/user/doctor'>
+            <LoginDoctor handleChangeLogin={handleChangeLogin} />
           </Route>
           <Route exact path='/patient/agenda' component={Agenda} />
           <Route exact path='/patient/prescriptions' component={PatientPrescriptions} />

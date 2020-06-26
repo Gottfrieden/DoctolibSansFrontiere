@@ -6,6 +6,7 @@ import moment from 'moment';
 import produce from 'immer';
 import listPlugin from '@fullcalendar/list';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import '../styles/Agenda.css';
 
 const Agenda = () => {
   const [prescriptions, setPrescriptions] = useState([]);
@@ -59,24 +60,23 @@ const Agenda = () => {
   }, [prescriptions]);
 
   return (
-    <div style={{ marginTop: '20px' }}>
-      <main id='agenda-main-container' className='main-container'>
-        <FullCalendar
-          plugins={[timeGridPlugin, listPlugin, dayGridPlugin]}
-          initialView='timeGridDay'
-          events={events}
-          contentHeight='auto'
-          slotMinTime='08:00'
-          slotMaxTime='20:00'
-          expandRows
-          headerToolbar={{
-            left: 'prev,next today',
-            center: 'title',
-            right: 'timeGridWeek,timeGridDay,listWeek'
-          }}
-        />
-      </main>
-    </div>
+    <main id='agenda-main-container' className='main-container'>
+      <FullCalendar
+        plugins={[timeGridPlugin, listPlugin, dayGridPlugin]}
+        initialView='timeGridDay'
+        events={events}
+        height='65vh'
+        contentHeight='100%'
+        slotMinTime='08:00'
+        slotMaxTime='20:00'
+        expandRows
+        headerToolbar={{
+          left: 'prev,next today',
+          center: 'title',
+          right: 'timeGridWeek,timeGridDay,listWeek'
+        }}
+      />
+    </main>
   );
 };
 

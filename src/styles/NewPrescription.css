@@ -121,13 +121,11 @@
   width: calc(100% + 20px);
   margin-left: -20px;
   margin-top: -20px;
-  border-radius: 10px 10px 0 0;
   border: 1px solid var(--lightGreen);
   padding:5px 10px;
 }
 .new-drug-name-container input {
   background-color:white;
-  border-radius: 6px;
   width:100%;
   margin-top:5px;
   margin-bottom:5px;

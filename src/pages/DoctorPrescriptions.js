@@ -21,8 +21,7 @@ const PatientPrescriptions = () => {
   return (
     <>
       <main id='seeprescription-main-container' className='main-container'>
-        
-        <Link to='/doctor/new-prescription' >
+        <Link to='/doctor/new-prescription'>
           <div className='create-new-button'>
             <span className='add-icon' />Create new prescription
           </div>
@@ -32,7 +31,7 @@ const PatientPrescriptions = () => {
           <div className={prescriptions === undefined ? 'loader' : 'loader invisible'} />
           {prescriptions.map(p => {
             return (
-              <Link to={`/doctor/prescriptions/${p.id}`}>
+              <Link to={`/doctor/prescriptions/${p.id}`} key={p.id}>
                 <div className='patient-prescription-container'>
                   <div className='prescription-status'>
                     <div className={`prescription-status-icon ${p.status}`} />

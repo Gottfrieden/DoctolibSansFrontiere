@@ -5,19 +5,18 @@ import '../styles/Login.css';
 const LoginPatient = ({ handleChangeLogin }) => {
   return (
     <main className='main-container'>
+      <div className='back-to-login'>
+        <p>
+          <Link to='/connection'>Go back</Link>
+        </p>
+      </div>
+      <form className='login-form content-container login-patient-container'>
       <h2 id='login-title'>Patient Log in</h2>
-      <form className='login-form content-container'>
         <div className='login-form-field'>
-          <label htmlFor='email' name='email'>
-            Email
-          </label>
-          <input type='email' name='email' />
+          <input type='email' name='email' placeholder='Your email'/>
         </div>
         <div className='login-form-field'>
-          <label htmlFor='password' name='password'>
-            Password
-          </label>
-          <input type='password' name='password' />
+          <input type='password' name='password' placeholder='Your password' />
         </div>
         <Link to='/patient/prescriptions'><button onClick={() => handleChangeLogin('patient')} id='signin-patient'>Sign In</button></Link>
       </form>

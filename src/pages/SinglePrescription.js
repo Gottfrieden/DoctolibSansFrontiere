@@ -22,7 +22,7 @@ export default function SinglePrescripion (props) {
       <div className='single-prescription-container'>
         <div className='back-to-all'>
           <p>
-            <Link to={`/patient/prescriptions`}>My Prescriptions</Link>
+            <Link to='/patient/prescriptions'>My Prescriptions</Link>
           </p>
         </div>
         <PrescriptionSummary params={params} singlePrescription={singlePrescription} />

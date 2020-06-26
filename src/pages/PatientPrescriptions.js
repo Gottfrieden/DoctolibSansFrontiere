@@ -21,11 +21,11 @@ const PatientPrescriptions = () => {
   return (
     <>
       <main id='seeprescription-main-container' className='main-container'>
-      <h2>My Prescriptions</h2>
+        <h2>My Prescriptions</h2>
         <div className='patient-prescriptions-container'>
           {prescriptions.map(p => {
             return (
-              <Link to={`/patient/prescriptions/${p.id}`}>
+              <Link to={`/patient/prescriptions/${p.id}`} key={p.id}>
                 <div className='patient-prescription-container'>
                   <div className='prescription-status'>
                     <div className={`prescription-status-icon ${p.status}`} />
