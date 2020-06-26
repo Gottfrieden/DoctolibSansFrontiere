@@ -19,8 +19,8 @@ const DoctorPrescriptions = () => {
   }, []);
 
   return (
-    <>
-      <h2>Prescritions send</h2>
+    <main className='doctor-prescription-main-container'>
+      <h2>Prescritions sent</h2>
       <div className='main-container'>
         <div className='search-background'>
           <input className='search-prescriptions' type='search' placeholder='Search' />
@@ -36,7 +36,7 @@ const DoctorPrescriptions = () => {
             </Link>)}
         </div>
       </div>
-    </>
+    </main>
   );
 };
 

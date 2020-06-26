@@ -4,10 +4,11 @@ footer {
   height: 8vh;
   justify-content: center;
   align-items: center;
-  position: fixed; bottom: 0;
+  bottom: 0;
   padding: 20px;
   background-color: var(--darkBlue);
   color: white;
+  position:absolute;
 }
 
 footer p {

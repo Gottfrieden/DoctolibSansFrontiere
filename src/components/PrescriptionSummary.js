@@ -16,7 +16,9 @@ export default function PrescriptionSummary (props) {
           <h3>Reference: <span className='light-weight-text'>{props.params.prescriptionId}</span></h3>
           <p>{p.status === 'canceled' ? `Canceled on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}` : `Delivered on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}`}</p>
         </div>
-        <QRCode value={p.status} size={100} />
+        <div className='qrcode-container'>
+          <QRCode value={p.status} size={200} />
+        </div>
         <p className='doctor-name'>Dr. {p.doctor.firstname} {p.doctor.lastname}</p>
         <div className='adress-phone-container'>
           <div className='adress-container'>
@@ -39,7 +41,6 @@ export default function PrescriptionSummary (props) {
           <p>{p.renewable && p.renewable_time >= 1 ? p.renewable_time === 1 ? `Renewable ${p.renewable_time} time` : `Renewable ${p.renewable_time} times` : 'Non Renewable'}</p>
         </div>
       </div>
-        )
     </>
   );
 }

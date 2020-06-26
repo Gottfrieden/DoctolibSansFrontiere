@@ -20,8 +20,8 @@ const PatientPrescriptions = () => {
 
   return (
     <>
-      <h2>My Prescriptions</h2>
       <main id='seeprescription-main-container' className='main-container'>
+        <h2>My Prescriptions</h2>
         <div className='patient-prescriptions-container'>
           {prescriptions.map(p => {
             return (
