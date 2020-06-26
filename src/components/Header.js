@@ -4,12 +4,16 @@ import Logo from '../images/logo.png';
 import '../styles/Header.css';
 
 const Header = (props) => {
-  console.log(window.location.href)
   const [url, setUrl] = useState(window.location.href);
 
   useEffect(() => {
+    console.log(window.location.href)
     setUrl(window.location.href)
   }, [url])
+
+  const handleClick = () => {
+    setUrl(window.location.href)
+  }
 
   return (
     <header>
@@ -21,7 +25,7 @@ const Header = (props) => {
       <nav>
         <ul>
           <li>
-            {url.includes('connection') && <Link to='/connection'>Sign in</Link>}
+            <Link to='/connection' onClick={handleClick}>Sign in</Link>
           </li>
           <li>
             {url.includes('patient') && <Link to='/patient/agenda'>Agenda</Link>}
