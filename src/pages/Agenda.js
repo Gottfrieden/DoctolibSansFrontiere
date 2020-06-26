@@ -65,7 +65,8 @@ const Agenda = () => {
         plugins={[timeGridPlugin, listPlugin, dayGridPlugin]}
         initialView='timeGridDay'
         events={events}
-        contentHeight='50vh'
+        height='65vh'
+        contentHeight='100%'
         slotMinTime='08:00'
         slotMaxTime='20:00'
         expandRows
