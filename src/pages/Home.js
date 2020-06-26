@@ -1,10 +1,14 @@
 import React from 'react';
+import demat from '../images/dematconsult.jpg';
+import '../styles/Home.css';
 
 const Home = () => {
   return (
     <>
       <main id='home-main-container' className='main-container'>
-        <h2>Home</h2>  
+        <section className='home-section-background'>
+          <img src={demat} alt='dematconsult' />
+        </section>
       </main>
     </>
   );
