@@ -43,8 +43,3 @@
 main#seeprescription-main-container {
   padding:10vh 0;
 }
-@media all and (min-width:900px) {
-  main#seeprescription-main-container {
-    padding:30vh 0;
-  }
-}

@@ -20,6 +20,9 @@ header nav ul {
 header nav ul li {
   display:inline;
   margin:0 10px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family:gilroy;
 }
 header nav ul li a {
   font-weight:700;

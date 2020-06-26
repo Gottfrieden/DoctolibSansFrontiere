@@ -2,9 +2,31 @@
   margin: 10px 0 20px 0;
   text-transform:uppercase;
 }
-
+.login-patient-container {
+  transition:all 0.2s ease-in-out;
+  color:var(--darkGreen);
+  border:1px solid var(--darkGreen);
+}
+#signin-patient {
+  cursor:pointer;
+}
+#signin-patient:hover {
+  background-color:white;
+  border:1px solid var(--darkGreen);
+  color:var(--darkGreen);
+}
+.login-patient-container:hover {
+  background-color:var(--lightGreen);
+}
+.login-patient-container input {
+  border:1px solid var(--darkGreen)!important;
+}
+.login-patient-container input::placeholder {
+  font-family:gilroy;
+  color:var(--darkGreen);
+}
 .login-form {
-  width: 290px;
+  width: 270px;
 }
 
 .login-form-field {
