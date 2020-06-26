@@ -11,7 +11,7 @@ import '../styles/Agenda.css';
 const Agenda = () => {
   const [prescriptions, setPrescriptions] = useState([]);
   const [events, setEvents] = useState([]);
-  const userMail = 'vb@gmail.com';
+  const userMail = 'demo@gmail.com';
 
   useEffect(() => {
     const getAllPrescriptions = fb.firestore().collection('prescriptions').onSnapshot(s => {

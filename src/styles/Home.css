@@ -15,6 +15,7 @@
   height:50vh;
 }
 .home-left-content {
+  width: calc(100% - 2px);
   padding:20px;
   border:1px solid var(--darkBlue);
 }
