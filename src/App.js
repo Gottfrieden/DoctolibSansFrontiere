@@ -30,7 +30,7 @@ function App () {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/connection' component={Connection} />
-          <Route exact path='/user/doctor/:id/prescription/history' component={DoctorPrescriptions} />
+          <Route exact path='/doctor/prescriptions' component={DoctorPrescriptions} />
           <Route exact path='/doctor/new-prescription' component={NewPrescription} />
           <Route exact path='/user/patient' component={LoginPatient} />
           <Route exact path='/user/doctor' component={LoginDoctor} />
@@ -41,6 +41,7 @@ function App () {
           <Route exact path='/patient/prescriptions/:prescriptionId' component={SinglePrescription} />
           <Route exact path='/single-doctor-prescription' component={SingleDoctorPrescription} />
           <Route exact path='/patient/my-prescription' component={PatientPrescriptions} />
+          <Route exact path='/doctor/prescriptions/:prescriptionId' component={SingleDoctorPrescription} />
         </Switch>
         <Footer />
       </div>

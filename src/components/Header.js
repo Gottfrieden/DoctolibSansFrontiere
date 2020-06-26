@@ -26,7 +26,7 @@ const Header = (props) => {
             <Link to='/doctor/new-prescription'>New Prescription</Link>
           </li>
           <li>
-            <Link to='/user/doctor/:id/prescription/history'>Prescriptions History</Link>
+            <Link to='/doctor/prescriptions'>Prescriptions History</Link>
           </li>
         </ul>
       </nav>

@@ -8,18 +8,12 @@ const LoginDoctor = () => {
       <form className='login-form content-container'>
         <h2 id='login-title'>Log In</h2>
         <div className='login-form-field'>
-          <label htmlFor='email' name='email'>
-            Email
-          </label>
-          <input type='email' name='email' />
+          <input type='email' name='email' placeholder='Your email address'/>
         </div>
         <div className='login-form-field'>
-          <label htmlFor='password' name='password'>
-            Password
-          </label>
-          <input type='password' name='password' />
+          <input type='password' name='password' placeholder='Your paswword'/>
         </div>
-        <Link to='/user/doctor/:id/prescription/history'><button id='signin-doctor'>Sign In</button></Link>
+        <Link to='/doctor/prescriptions'><button id='signin-doctor'>Sign In</button></Link>
       </form>
     </main>
   );

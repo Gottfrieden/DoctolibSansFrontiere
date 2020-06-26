@@ -18,6 +18,7 @@ body {
   --heavyBoxShadow:1px 1px 2px rgba(0,0,0,.1);
   --lightBoxShadow: 0 0 15px rgba(0,0,0,.1);
   --contentContainerHoverShadow: 1px 1px 3px rgba(0,0,0,.1);
+  --lightRed: #ffa3a3;
 }
 
 .main-container {

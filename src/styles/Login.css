@@ -31,7 +31,7 @@
   border:1px solid transparent;
 }
 .login-form button:hover {
-  background-color:white;
+  background-color:white!important;
   color:var(--darkBlue);
   border:1px solid var(--darkBlue);
 }
