@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../styles/PrescriptionSummary.css';
 import moment from 'moment';
 import QRCode from "react-qr-code";
 
 export default function PrescriptionSummary (props) {
   const p = props.singlePrescription;
-  useEffect(() => {
-    console.log(p.status)
-  }, [])
   return (
     <>
       <div className='prescription-summary-container content-container'>
@@ -16,7 +13,7 @@ export default function PrescriptionSummary (props) {
           <p>{p.status === 'canceled' ? `Canceled on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}` : `Delivered on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}`}</p>
         </div>
         <div className='qrcode-container'>
-          <QRCode value={p.status} size={200}/>
+          <QRCode value={`https://localhost:3000/${props.params.prescriptionId}`} size={200}/>
         </div>
         <p className='doctor-name'>Dr. {p.doctor.firstname} {p.doctor.lastname}</p>
         <div className='adress-phone-container'>
