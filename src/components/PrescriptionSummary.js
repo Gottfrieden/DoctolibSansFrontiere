@@ -14,7 +14,7 @@ export default function PrescriptionSummary (props) {
           <p>{p.status === 'canceled' ? `Canceled on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}` : `Delivered on ${moment.unix(p.created_at.seconds).format('MMMM Do YYYY')}`}</p>
         </div>
         <div className='qrcode-container'>
-          <QRCode value={`https://localhost:3000/${props.params.prescriptionId}`} size={200}/>
+          <QRCode value={`ordoli-side-app.netlify.app/${props.params.prescriptionId}`} size={200}/>
         </div>
         <p className='doctor-name'>Dr. {p.doctor.firstname} {p.doctor.lastname}</p>
         <div className='adress-phone-container'>
